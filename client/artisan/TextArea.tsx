@@ -27,7 +27,7 @@ function stateClass(state: TextAreaState): string {
       "text-stone-700 dark:text-stone-300",
       "placeholder:text-stone-400 placeholder:dark:text-stone-600",
       "ring-rose-500 dark:ring-rose-500",
-      tw.focus("ring-rose-500 dark:ring-rose-500")
+      "focus:ring-rose-500 dark:ring-rose-500"
     ),
     normal: clsx(
       "text-stone-700 dark:text-stone-300",

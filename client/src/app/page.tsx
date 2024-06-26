@@ -47,30 +47,30 @@ export default function HeroSection() {
   return (
     <div
       className={clsx(
-        `flex items-center justify-center flex-col p-12 w-100 h-screen gap-y-8 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-bottom bg-center sm:min-h-[360px] md:min-h-[720px]`,
+        `flex items-center justify-center flex-col p-12 w-100 h-screen gap-y-8 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center sm:min-h-[360px] md:min-h-[720px]`,
         "font-inter"
       )}
       id="hero"
     >
       <div className="absolute top-5 bg-[#00000080] px-6 py-2 rounded-3xl hidden sm:block">
         <a href="#hero" className={hyperlinkStyle}>
-          HOME
+          Home
         </a>
         <a href="#experience" className={hyperlinkStyle}>
-          EXPERIENCE
+          Experience
         </a>
         <a href="projects" className={hyperlinkStyle}>
-          PROJECTS
+          Projects
         </a>
         <a href="contact" className={hyperlinkStyle}>
-          CONTACT
+          Contact
         </a>
         <a
           href="https://www.google.com"
           target="_blank"
           className={hyperlinkStyle}
         >
-          RESUME
+          Resume
         </a>
       </div>
 
@@ -99,32 +99,32 @@ export default function HeroSection() {
               href="#hero"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}
             >
-              HOME
+              Home
             </a>
             <a
               href="#experience"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
             >
-              EXPERIENCE
+              Experience
             </a>
             <a
               href="#projects"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
             >
-              PROJECTS
+              Projects
             </a>
             <a
               href="#contact"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
             >
-              CONTACT
+              Contact
             </a>
             <a
               href="https://www.google.com"
               target="_blank"
               className={`${hyperlinkStyle} p-2 pb-4`}
             >
-              RESUME
+              Resume
             </a>
           </div>
         ) : null}
@@ -136,8 +136,8 @@ export default function HeroSection() {
         </Text>
 
         <Heading
-          className="text-whip my-4 md:text-[3.5em] font-extrabold animate-typing overflow-hidden"
-          color="#FEBB56"
+          className="text-whip my-4 md:text-[3.5em] font-extrabold overflow-hidden"
+          // color="#FEBB56"
           level="heading1"
           tag="h1"
         >
@@ -146,7 +146,7 @@ export default function HeroSection() {
 
         <hr className="bg-white w-52 lg:w-80" />
         <div className=" px-8 py-2 mt-5 min-w-[80px] min-h-[40px] flex justify-center items-center">
-          <div className={"overflow-hidden border-r-[.15em]"}>
+          <div className="overflow-hidden border-r-[.15em]">
             <Text
               className="text-white tracking-[0.35em] text-[0.75em] md:text-[0.875em] font-semibold"
               id="typing-container"
@@ -155,6 +155,13 @@ export default function HeroSection() {
             </Text>
           </div>
         </div>
+
+        <p className="py-4 max-w-screen-xl text-[0.875em] md:text-[1em]">
+          As a daily user of software applications, I value aesthetics and
+          responsiveness. <br /> My goal as a developer is to create efficient
+          and visually pleasing applications, ensuring a delightful user
+          experience.
+        </p>
       </div>
     </div>
   );
