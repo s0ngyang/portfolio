@@ -45,11 +45,17 @@ export default function HeroSection() {
   }, [currTextIndex, currWordIndex]);
 
   return (
-    <div
+    <main
       className={clsx(
-        `flex items-center justify-center flex-col p-12 w-100 h-screen gap-y-8 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center sm:min-h-[360px] md:min-h-[720px]`,
+        `flex items-center justify-center flex-col p-12 w-100 h-screen gap-y-8 
+        sm:min-h-[360px] md:min-h-[720px]`,
         "font-inter"
       )}
+      style={{
+        background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
       id="hero"
     >
       <div className="absolute top-5 bg-[#00000080] px-6 py-2 rounded-3xl hidden sm:block">
@@ -156,13 +162,13 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <p className="py-4 max-w-screen-xl text-[0.875em] md:text-[1em]">
+        <p className="py-4 text-white max-w-screen-xl text-[0.875em] md:text-[1em]">
           As a daily user of software applications, I value aesthetics and
           responsiveness. <br /> My goal as a developer is to create efficient
           and visually pleasing applications, ensuring a delightful user
           experience.
         </p>
       </div>
-    </div>
+    </main>
   );
 }
