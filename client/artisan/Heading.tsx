@@ -10,7 +10,7 @@ export type HeadingLevel =
   | "heading4"
   | "heading5"
   | "heading6";
-type HeadingColor = "auto" | "custom" | "dark" | "light";
+type HeadingColor = "auto" | "custom" | "dark" | "light" | string;
 
 const headingLevelsClasses: Record<HeadingLevel, string> = {
   custom: "",

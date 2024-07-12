@@ -7,13 +7,16 @@ type HeroProps = {
 
 const Hero: React.FC<HeroProps> = ({ currentText }) => {
   return (
-    <div className="flex flex-col items-center justify-center text-center py-52">
+    <div
+      className="flex flex-col items-center justify-center text-center py-52 sm:min-h-screen"
+      id="hero"
+    >
       <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px]">
         Hi, my name is
       </Text>
 
       <Heading
-        className="text-whip my-4 md:text-[3.5em] font-extrabold overflow-hidden"
+        className="text-latte my-4 md:text-[3.5em] font-extrabold overflow-hidden"
         level="heading1"
         tag="h1"
       >

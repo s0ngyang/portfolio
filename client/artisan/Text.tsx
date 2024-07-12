@@ -5,7 +5,7 @@ import { cn } from "../utils/cn";
 
 export type TextSize = "base" | "lg" | "sm" | "xl" | "xs";
 export type TextWeight = "bold" | "light" | "medium" | "normal" | "semibold";
-export type TextColor = "auto" | "custom" | "dark" | "light";
+export type TextColor = "auto" | "custom" | "dark" | "light" | string;
 
 const textSizeClasses: Record<TextSize, string> = {
   base: "text-base",
