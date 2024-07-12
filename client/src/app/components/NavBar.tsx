@@ -43,8 +43,8 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
             viewBox="0 0 17 14"
           >
             <path
-              stroke={toggleNav ? "#FEBB56" : "#FFFFFF"}
-              className="hover:fill-[#FEBB56]"
+              stroke={toggleNav ? "#ded0b6" : "#FFFFFF"}
+              className="hover:fill-latte"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
@@ -55,25 +55,25 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
         {toggleNav ? (
           <div className="flex flex-col bg-[#00000080] border-[1px] border-white rounded-xl">
             <Link
-              href="/"
+              href="#"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}
             >
               Home
             </Link>
             <Link
-              href="experience"
+              href="#experience"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
             >
               Experience
             </Link>
             <Link
-              href="projects"
+              href="#projects"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
             >
               Projects
             </Link>
             <Link
-              href="contact"
+              href="#contact"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
             >
               Contact

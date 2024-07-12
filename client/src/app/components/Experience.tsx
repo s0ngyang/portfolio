@@ -13,21 +13,17 @@ export default function Experience() {
       yearEnd: "Present",
       desc: (
         <ul className="list-disc p-2">
+          <li>Utilise React.js with Shadcn UI to create a new episode page</li>
           <li>
-            Frontend: Utilise React.js with Shadcn UI to create a new episode
-            page
-          </li>
-          <li>
-            Backend: Use FastAPI, PostgreSQL with SQLAlchemy ORM to revamp how
+            Use FastAPI, PostgreSQL with SQLAlchemy ORM to revamp how
             users&apos; monthly usage is tracked
           </li>
           <li>
-            DevOps: Engage in Agile development, implement CI/CD, attend daily
-            stand-ups
+            Engage in Agile development, implement CI/CD, attend daily stand-ups
           </li>
           <li>
-            AI/ML: Use Modal GPU for transcription, Anthropic and OpenAI to
-            extract custom modules
+            Use Modal GPU for transcription, Anthropic and OpenAI to extract
+            custom modules
           </li>
         </ul>
       ),
@@ -68,7 +64,7 @@ export default function Experience() {
 
   return (
     <div
-      className="p-12 pb-20 max-w-screen-2xl sm:min-h-screen flex justify-center flex-col"
+      className="p-12 pb-20 max-w-screen-2xl md:min-h-screen flex justify-center flex-col"
       id="experience"
     >
       <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px]">
