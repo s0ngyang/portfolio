@@ -79,7 +79,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
               Contact
             </Link>
             <Link
-              href="https://www.google.com"
+              href="https://docs.google.com/document/d/1NUYli_jzKU7Au_4HcSgnhryZH_66YA2PhPUl5BngePc/edit?usp=sharing"
               target="_blank"
               className={`${hyperlinkStyle} p-2 pb-4`}
             >

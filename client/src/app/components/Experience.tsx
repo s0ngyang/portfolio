@@ -75,7 +75,7 @@ export default function Experience() {
         EXPERIENCES
       </Text>
       <Heading
-        className="text-latte my-4 md:text-[3.5em] font-extrabold"
+        className="text-latte-700 my-4 md:text-[3.5em] font-extrabold"
         level="heading1"
         tag="h1"
       >
@@ -91,21 +91,21 @@ export default function Experience() {
             <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div
                 className={clsx(
-                  "bg-whip dark:bg-whip",
+                  "bg-latte dark:bg-latte",
                   "h-full w-1 pointer-events-none"
                 )}
               />
             </div>
             <div
               className={clsx(
-                "bg-dun-300 dark:bg-dun-300 border-white border-[3px]",
+                "bg-khaki-300 dark:bg-khaki-300 border-white border-[3px]",
                 "flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center relative z-10"
               )}
             />
 
             <div className="flex-grow p-4 flex items-start flex-col ml-4 border-2 rounded-xl border-white">
               <span className="flex items-end">
-                <Text className="text-latte text-[1em] md:text-[1.25em] font-extrabold">
+                <Text className="text-whip text-[1em] md:text-[1.25em] font-extrabold">
                   {comp.role} &nbsp;
                 </Text>
                 <Text className="text-white text-[0.875em] md:text-[1em] font-bold">
@@ -132,11 +132,8 @@ export default function Experience() {
             className="flex flex-col justify-start border-white border-[1px] rounded-lg p-4 mb-4 transition-all ease-in"
             key={comp.id}
           >
-            <Text
-              className="text-[#FEBB56] text-[1em] md:text-[1.25em] font-extrabold"
-              color="#FEBB56"
-            >
-              {comp.role} @ {comp.name}
+            <Text className="text-white text-[1em] md:text-[1.25em] font-extrabold">
+              <span className="text-whip">{comp.role}</span> @ {comp.name}
             </Text>
             <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold my-2">
               {comp.yearStart} - {comp.yearEnd}

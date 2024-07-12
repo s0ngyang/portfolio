@@ -8,7 +8,7 @@ type HeroProps = {
 const Hero: React.FC<HeroProps> = ({ currentText }) => {
   return (
     <div
-      className="flex flex-col items-center justify-center text-center py-52 sm:min-h-screen"
+      className="flex flex-col items-center justify-center text-center py-52 md:min-h-screen"
       id="hero"
     >
       <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px]">
@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
       </Text>
 
       <Heading
-        className="text-latte my-4 md:text-[3.5em] font-extrabold overflow-hidden"
+        className="text-latte my-4 text-[2em] md:text-[3.5em] font-extrabold overflow-hidden"
         level="heading1"
         tag="h1"
       >
