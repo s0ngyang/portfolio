@@ -64,14 +64,14 @@ export default function Experience() {
 
   return (
     <div
-      className="p-12 pb-20 max-w-screen-2xl md:min-h-screen flex justify-center flex-col"
+      className="md:p-12 pb-20 max-w-screen-2xl md:min-h-screen flex justify-center flex-col"
       id="experience"
     >
-      <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px]">
+      <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px] text-center">
         EXPERIENCES
       </Text>
       <Heading
-        className="text-latte-700 my-4 md:text-[3.5em] font-extrabold"
+        className="text-latte-700 my-4 md:text-[3.5em] font-extrabold text-center"
         level="heading1"
         tag="h1"
       >
@@ -109,7 +109,6 @@ export default function Experience() {
                 </Text>
               </span>
               <Text className="text-white tracking-widest text-[0.75em] md:text-[0.875em] font-semibold">
-                {" "}
                 {comp.yearStart} - {comp.yearEnd}
               </Text>
 
@@ -135,7 +134,7 @@ export default function Experience() {
               {comp.yearStart} - {comp.yearEnd}
             </Text>
             <Text className="text-white text-[0.75em] md:text-[0.875em] font-medium my-1 text-justify">
-              {comp.desc}{" "}
+              {comp.desc}
             </Text>
           </div>
         ))}

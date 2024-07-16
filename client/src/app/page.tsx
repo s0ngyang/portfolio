@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
+import Projects from "./components/Projects";
 
 export default function Home() {
   const [toggleNav, setToggleNav] = useState(false);
@@ -44,7 +45,7 @@ export default function Home() {
     <div
       className={clsx(
         `flex items-center flex-col p-12 h-screen gap-y-8
-      sm:min-h-[360px] md:min-h-[720px]`,
+      sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl`,
         "font-inter"
       )}
     >
@@ -53,6 +54,8 @@ export default function Home() {
       <Hero currentText={currentText} />
 
       <Experience />
+
+      <Projects />
     </div>
   );
 }

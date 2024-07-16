@@ -7,7 +7,7 @@ type NavBarProps = {
 
 const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
   const hyperlinkStyle =
-    "text-white font-semibold text-[0.75em] hover:text-khaki hover:font-bold mx-4 tracking-[0.25em] transition-all transform ease-linear";
+    "text-white font-bold text-[0.75em] hover:text-khaki hover:font-bold mx-4 tracking-[0.25em] transition-all transform ease-linear";
 
   return (
     <>
