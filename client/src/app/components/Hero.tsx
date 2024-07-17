@@ -35,11 +35,11 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
         </div>
       </div>
 
-      <p className="py-4 text-white max-w-screen-xl text-[0.875em] md:text-[1em]">
+      <Text className="py-4 text-white max-w-screen-lg text-[0.875em] md:text-[1em]">
         As a daily user of software applications, I value aesthetics and
         responsiveness. <br /> My goal as a developer is to create efficient and
         visually pleasing applications, ensuring a delightful user experience.
-      </p>
+      </Text>
     </div>
   );
 };

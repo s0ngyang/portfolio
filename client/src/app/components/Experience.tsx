@@ -71,7 +71,7 @@ export default function Experience() {
         EXPERIENCES
       </Text>
       <Heading
-        className="text-latte-700 my-4 md:text-[3.5em] font-extrabold text-center"
+        className="text-latte-700 my-4 text-[2em] md:text-[3.5em] font-extrabold text-center"
         level="heading1"
         tag="h1"
       >

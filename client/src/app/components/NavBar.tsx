@@ -11,7 +11,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
 
   return (
     <>
-      <div className="fixed top-5 bg-[#00000080] px-6 py-2 rounded-3xl hidden sm:block">
+      <div className="fixed top-5 bg-[#00000080] px-6 py-2 rounded-3xl hidden sm:block z-50">
         <Link href="#" className={hyperlinkStyle}>
           Home
         </Link>
@@ -33,7 +33,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
         </Link>
       </div>
 
-      <div className="absolute top-3 left-1 px-6 py-2 rounded-3xl block sm:hidden">
+      <div className="fixed top-3 left-1 px-6 py-2 rounded-3xl block sm:hidden">
         <button onClick={() => setToggleNav(!toggleNav)}>
           <svg
             className="w-5 h-5"

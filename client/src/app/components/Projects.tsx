@@ -28,11 +28,11 @@ const Projects = () => {
 
   return (
     <div
-      className={`flex flex-col px-4 md:px-12 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-xl`}
+      className={`flex flex-col px-4 md:px-12 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-lg`}
       id="projects"
     >
       <Heading
-        className="text-latte-700 my-4 md:text-[3.5em] text-2xl font-extrabold"
+        className="text-latte-700 my-4 text-[2em] md:text-[3.5em] text-2xl font-extrabold"
         level="heading1"
         tag="h1"
       >
@@ -43,12 +43,14 @@ const Projects = () => {
         {projectObjs.map((proj) => (
           <div
             key={proj.name}
-            className={`border-white border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200`}
+            className="max-w-screen-lg border-white border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200"
           >
             <div className="w-full md:w-1/3 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
+              <Image
+                className="object-cover h-full"
                 src={proj.thumb.src}
+                width={1530}
+                height={1500}
                 alt="TypeDash thumbnail"
               />
             </div>
@@ -71,7 +73,7 @@ const Projects = () => {
                   </a>
                 </span>
               </Text>
-              <ul className="list-disc text-white mt-2 text-sm md:text-base lg:text-lg ml-5">
+              <ul className="list-disc text-white mt-2 text-sm md:text-base ml-5">
                 {proj.desc.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
