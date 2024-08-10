@@ -42,13 +42,20 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
-        <div>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
           <div className="border-white border-2 rounded-2xl flex flex-col p-8 items-center">
             <div className="w-[100%]">
               <span className={textStyle}>NAME</span>
               <TextInput
                 required
                 label="name"
+                type="text"
+                name="name"
                 className="bg-white/20 w-[100%] p-3 m-[-5px] text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
@@ -57,6 +64,8 @@ export default function ContactSection() {
               <TextInput
                 required
                 label="email"
+                type="email"
+                name="email"
                 className="bg-white/20 p-3 w-[100%] m-[-5px] text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
@@ -71,12 +80,13 @@ export default function ContactSection() {
           </div>
           <div className="mt-4 flex justify-center">
             <button
+              type="submit"
               className={`${textStyle} border-[1px] px-4 py-2 rounded-lg mr-3 hover:bg-white hover:text-black transition-all transform ease-linear`}
             >
               SEND MESSAGE
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
