@@ -9,8 +9,8 @@ export default function Experience() {
       id: 0,
       name: "Podsmart AI",
       role: "Software Engineer Intern",
-      yearStart: "May 2022",
-      yearEnd: "Present",
+      yearStart: "May 2024",
+      yearEnd: "Aug 2024",
       desc: (
         <ul className="list-disc p-2">
           <li>Utilise React.js with Shadcn UI to create a new episode page</li>
@@ -24,6 +24,9 @@ export default function Experience() {
           <li>
             Use Modal GPU for transcription, Anthropic and OpenAI to extract
             custom modules
+          </li>
+          <li>
+            Identified authorization security issues and promptly resolved them
           </li>
         </ul>
       ),

@@ -74,6 +74,8 @@ export default function ContactSection() {
               <TextArea
                 required
                 label="message"
+                // type="text"
+                name="message"
                 className="bg-white/20 p-3 w-[100%] m-[-5px] text-white min-h-[200px] md:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
