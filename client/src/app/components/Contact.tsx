@@ -1,11 +1,15 @@
+import React, { useState, FormEventHandler } from "react";
 import TextArea from "../../../artisan/TextArea";
 import TextInput from "../../../artisan/TextInput";
 import Heading from "../../../artisan/Heading";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FormEventHandler } from "react";
 
 export default function ContactSection() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const textStyle =
     "text-white text-[0.75em] font-semibold tracking-[0.45em] md:text-[0.875em]";
 
@@ -28,7 +32,10 @@ export default function ContactSection() {
     })
       .then(() => {
         myForm.reset();
-        toast.success("Your message has been sent successfully!");
+        setName(""); // Reset the state
+        setEmail(""); // Reset the state
+        setMessage(""); // Reset the state
+        toast.success("Message sent! I'll be in contact with you soon.");
       })
       .catch((error) =>
         toast.error("Failed to send message. Please try again later.")
@@ -87,6 +94,8 @@ export default function ContactSection() {
                 label="name"
                 type="text"
                 name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="bg-white/20 w-[100%] p-3 m-[-5px] text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
@@ -97,6 +106,8 @@ export default function ContactSection() {
                 label="email"
                 type="email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="bg-white/20 p-3 w-[100%] m-[-5px] text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
@@ -106,6 +117,8 @@ export default function ContactSection() {
                 required
                 label="message"
                 name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="bg-white/20 p-3 w-[100%] m-[-5px] text-white min-h-[200px] md:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
@@ -113,7 +126,12 @@ export default function ContactSection() {
           <div className="mt-4 flex justify-center">
             <button
               type="submit"
-              className={`${textStyle} border-[1px] px-4 py-2 rounded-lg mr-3 hover:bg-white hover:text-black transition-all transform ease-linear`}
+              disabled={!name || !email || !message}
+              className={`${textStyle} border-[1px] px-4 py-2 rounded-lg mr-3 ${
+                !name || !email || !message
+                  ? "opacity-20 cursor-not-allowed"
+                  : "hover:bg-white hover:text-black transition-all transform ease-linear"
+              }`}
             >
               SEND MESSAGE
             </button>

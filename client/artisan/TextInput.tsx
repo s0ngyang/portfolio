@@ -13,7 +13,7 @@ type Props = OriginalAttributes &
     errorMessage?: React.ReactNode;
     isLabelHidden?: boolean;
     label: string;
-    onChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
+    // onChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
     size?: TextInputSize;
     startIcon?: React.ComponentType<React.ComponentProps<"svg">>;
     value?: string;
@@ -189,7 +189,7 @@ function TextInput(
               return;
             }
 
-            onChange(event.target.value, event);
+            onChange(event);
           }}
           {...props}
         />

@@ -13,7 +13,7 @@ type Props = OriginalAttributes &
     errorMessage?: React.ReactNode;
     isLabelHidden?: boolean;
     label: string;
-    onChange?: (value: string, event: ChangeEvent<HTMLTextAreaElement>) => void;
+    // onChange?: (value: string, event: ChangeEvent<HTMLTextAreaElement>) => void;
     resize?: TextAreaResize;
     size?: TextAreaSize;
     value?: string;
@@ -181,7 +181,7 @@ function TextArea(
               return;
             }
 
-            onChange(event.target.value, event);
+            onChange(event);
           }}
           {...props}
         />
