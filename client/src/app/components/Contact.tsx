@@ -9,12 +9,28 @@ export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false); // Added loading state
 
   const textStyle =
     "text-white text-[0.75em] font-semibold tracking-[0.45em] md:text-[0.875em]";
 
+  function areFieldsFilled(
+    name: string,
+    email: string,
+    message: string
+  ): boolean {
+    return [name, email, message].every((field) => field.trim().length > 0);
+  }
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
+
+    if (!areFieldsFilled(name, email, message)) {
+      toast.error("Please fill in all fields!");
+      return;
+    }
+
+    setLoading(true); // Disable the button
 
     const myForm = event.target as HTMLFormElement;
     const formData = new FormData(myForm);
@@ -39,7 +55,8 @@ export default function ContactSection() {
       })
       .catch((error) =>
         toast.error("Failed to send message. Please try again later.")
-      );
+      )
+      .finally(() => setLoading(false)); // Re-enable the button
   };
 
   return (
@@ -126,14 +143,14 @@ export default function ContactSection() {
           <div className="mt-4 flex justify-center">
             <button
               type="submit"
-              disabled={!name || !email || !message}
+              // disabled={loading || !areFieldsFilled(name, email, message)} // Disable if loading or any field is empty
               className={`${textStyle} border-[1px] px-4 py-2 rounded-lg mr-3 ${
-                !name || !email || !message
+                loading || !areFieldsFilled(name, email, message)
                   ? "opacity-20 cursor-not-allowed"
                   : "hover:bg-white hover:text-black transition-all transform ease-linear"
               }`}
             >
-              SEND MESSAGE
+              {loading ? "SENDING..." : "SEND MESSAGE"}
             </button>
           </div>
         </form>

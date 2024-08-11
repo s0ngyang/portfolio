@@ -59,11 +59,11 @@ export default function Experience() {
     },
   ];
 
-  const buttonStyle =
-    "py-2 rounded-lg text-white border-[1px] text-[0.875em] md:text-[1em] font-semibold hover:bg-white hover:text-black mb-3";
+  // const buttonStyle =
+  //   "py-2 rounded-lg text-white border-[1px] text-[0.875em] md:text-[1em] font-semibold hover:bg-white hover:text-black mb-3";
 
-  const selectedButtonStyle =
-    "py-2 rounded-lg border-[1px] text-[0.875em] md:text-[1em] font-semibold bg-white text-black mb-3";
+  // const selectedButtonStyle =
+  //   "py-2 rounded-lg border-[1px] text-[0.875em] md:text-[1em] font-semibold bg-white text-black mb-3";
 
   return (
     <div
