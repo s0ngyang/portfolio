@@ -1,10 +1,33 @@
 import TextArea from "../../../artisan/TextArea";
 import TextInput from "../../../artisan/TextInput";
 import Heading from "../../../artisan/Heading";
+import { FormEvent } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactSection() {
   const textStyle =
     "text-white text-[0.75em] font-semibold tracking-[0.45em] md:text-[0.875em]";
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        myForm.reset();
+        toast.success("Your message has been sent successfully!");
+      })
+      .catch((error) =>
+        toast.error("Failed to send message. Please try again later.")
+      );
+  };
 
   return (
     <div className="flex justify-center items-center min-h-screen" id="contact">
@@ -47,7 +70,9 @@ export default function ContactSection() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="border-white border-2 rounded-2xl flex flex-col p-8 items-center">
             <div className="w-[100%]">
               <span className={textStyle}>NAME</span>
