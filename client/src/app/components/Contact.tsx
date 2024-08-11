@@ -1,24 +1,30 @@
 import TextArea from "../../../artisan/TextArea";
 import TextInput from "../../../artisan/TextInput";
 import Heading from "../../../artisan/Heading";
-import { FormEvent } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FormEventHandler } from "react";
 
 export default function ContactSection() {
   const textStyle =
     "text-white text-[0.75em] font-semibold tracking-[0.45em] md:text-[0.875em]";
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
 
-    const myForm = event.target;
+    const myForm = event.target as HTMLFormElement;
     const formData = new FormData(myForm);
+
+    // Convert FormData to URLSearchParams
+    const formParams = new URLSearchParams();
+    formData.forEach((value, key) => {
+      formParams.append(key, value.toString());
+    });
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: formParams.toString(),
     })
       .then(() => {
         myForm.reset();
@@ -99,7 +105,6 @@ export default function ContactSection() {
               <TextArea
                 required
                 label="message"
-                // type="text"
                 name="message"
                 className="bg-white/20 p-3 w-[100%] m-[-5px] text-white min-h-[200px] md:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
