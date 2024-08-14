@@ -43,9 +43,9 @@ const Projects = () => {
         {projectObjs.map((proj) => (
           <div
             key={proj.name}
-            className="max-w-screen-lg border-white border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200"
+            className="max-w-screen-lg border-white border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200 -z-10"
           >
-            <div className="w-full md:w-1/3 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden -z-10">
+            <div className="w-full md:w-1/3 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
               <Image
                 className="object-cover h-full"
                 src={proj.thumb.src}

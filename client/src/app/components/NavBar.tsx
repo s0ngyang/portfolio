@@ -7,11 +7,11 @@ type NavBarProps = {
 
 const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
   const hyperlinkStyle =
-    "text-white font-bold text-[0.8em] hover:text-khaki hover:font-bold mx-4 tracking-[0.25em] transition-all transform ease-linear";
+    "text-white font-bold text-[0.85em] hover:text-khaki hover:font-bold mx-4 tracking-[0.2em] transition-all transform ease-linear";
 
   return (
     <>
-      <div className="fixed top-5 bg-[#00000080] px-6 py-2 rounded-3xl hidden sm:block z-50">
+      <div className="fixed top-5 bg-[#00000095] px-6 py-2 rounded-3xl hidden sm:block z-50">
         <Link href="#hero" className={hyperlinkStyle}>
           Home
         </Link>
@@ -53,7 +53,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
           </svg>
         </button>
         {toggleNav ? (
-          <div className="flex flex-col bg-[#00000080] border-[1px] border-white rounded-xl">
+          <div className="flex flex-col bg-[#00000095] border-[1px] border-white rounded-xl z-50">
             <Link
               href="#"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}
