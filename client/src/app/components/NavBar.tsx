@@ -12,7 +12,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
   return (
     <>
       <div className="fixed top-5 bg-[#00000080] px-6 py-2 rounded-3xl hidden sm:block z-50">
-        <Link href="#" className={hyperlinkStyle}>
+        <Link href="#hero" className={hyperlinkStyle}>
           Home
         </Link>
         <Link href="#experience" className={hyperlinkStyle}>
