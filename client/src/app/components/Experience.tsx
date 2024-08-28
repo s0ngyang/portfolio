@@ -13,7 +13,10 @@ export default function Experience() {
       yearEnd: "Aug 2024",
       desc: (
         <ul className="list-disc p-2">
-          <li>Utilise React.js with Shadcn UI to create a new episode page</li>
+          <li>
+            Utilise React.js with Shadcn UI to create an audio player from
+            scratch for a new episode page
+          </li>
           <li>
             Use FastAPI, PostgreSQL with SQLAlchemy ORM to revamp how
             users&apos; monthly usage is tracked
