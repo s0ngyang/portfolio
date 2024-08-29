@@ -15,7 +15,7 @@ const Projects = () => {
     {
       name: "TypeDash",
       desc: [
-        "A sleek and simple type racing website for mechanical keyboard enthusiasts to improve their typing speed and accuracy",
+        "Frontend design implemented in React.js and Chakra UI",
         "Utilised Express.js and Prisma ORM to implement RESTful APIs, facilitating efficient data storage and retrieval within the web application",
         "Implemented real-time updates using Socket.IO to display race results and leaderboard changes to users instantly",
         "Demonstrated active involvement in deploying web services on DigitalOcean, showcasing proficiency in ensuring smooth and error-free functionality in the production environment",
