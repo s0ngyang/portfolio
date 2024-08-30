@@ -25,7 +25,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
           Contact
         </Link>
         <Link
-          href="https://docs.google.com/document/d/1NUYli_jzKU7Au_4HcSgnhryZH_66YA2PhPUl5BngePc/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1J6cObFEEi07tlUyUVHg0gR59sepOA1EI/edit?usp=sharing&ouid=103492402217116028456&rtpof=true&sd=true"
           target="_blank"
           className={hyperlinkStyle}
         >
@@ -79,7 +79,7 @@ const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
               Contact
             </Link>
             <Link
-              href="https://docs.google.com/document/d/1NUYli_jzKU7Au_4HcSgnhryZH_66YA2PhPUl5BngePc/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1J6cObFEEi07tlUyUVHg0gR59sepOA1EI/edit?usp=sharing&ouid=103492402217116028456&rtpof=true&sd=true"
               target="_blank"
               className={`${hyperlinkStyle} p-2 pb-4`}
             >
