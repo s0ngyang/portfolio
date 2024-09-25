@@ -12,7 +12,10 @@ import { ToastContainer } from "react-toastify";
 export default function Home() {
   const [toggleNav, setToggleNav] = useState(false);
 
-  const text = ["Aspiring Software Engineer", "Computer Science Student"];
+  const text = [
+    "Aspiring Software Engineer",
+    "Year 3 Computer Science Student",
+  ];
   const [currWordIndex, setCurrWordIndex] = useState(0);
   const [currTextIndex, setCurrTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

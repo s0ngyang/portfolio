@@ -14,7 +14,7 @@ export default function Experience() {
       desc: (
         <ul className="list-disc p-2">
           <li>
-            Utilise React.js with Shadcn UI to create an audio player from
+            Utilise Next.js with Shadcn UI to create an audio player from
             scratch for a new episode page
           </li>
           <li>
