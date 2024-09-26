@@ -14,7 +14,7 @@ export default function Home() {
 
   const text = [
     "Aspiring Software Engineer",
-    "Year 3 Computer Science Student",
+    "Penultimate Computer Science Student",
   ];
   const [currWordIndex, setCurrWordIndex] = useState(0);
   const [currTextIndex, setCurrTextIndex] = useState(0);
