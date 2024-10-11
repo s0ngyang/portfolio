@@ -108,18 +108,18 @@ export default function Experience() {
             <div className="flex-grow p-4 flex items-start flex-col ml-4 border-2 rounded-xl border-white">
               <span className="flex items-end">
                 <Text className="text-whip text-[1em] md:text-[1.25em] font-extrabold">
-                  {comp.role} &nbsp;
+                  {comp.role}
                 </Text>
-                <Text className="text-white text-[0.875em] md:text-[1em] font-bold">
+                <Text className="text-white text-sm md:text-base font-bold">
                   @ {comp.name}
                 </Text>
               </span>
-              <Text className="text-white tracking-widest text-[0.75em] md:text-[0.875em] font-semibold">
+              <Text className="text-white tracking-widest text-sm md:text-base font-semibold">
                 {comp.yearStart} - {comp.yearEnd}
               </Text>
 
               <div>
-                <Text className="text-white text-[0.75em] md:text-[0.875em] font-medium my-1 text-justify">
+                <Text className="text-white text-sm md:text-base font-medium my-1">
                   {comp.desc}
                 </Text>
               </div>
@@ -139,7 +139,7 @@ export default function Experience() {
             <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold my-2">
               {comp.yearStart} - {comp.yearEnd}
             </Text>
-            <Text className="text-white text-[0.75em] md:text-[0.875em] font-medium my-1 text-justify">
+            <Text className="text-white text-[0.75em] md:text-[0.875em] font-medium my-1">
               {comp.desc}
             </Text>
           </div>
