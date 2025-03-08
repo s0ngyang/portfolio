@@ -1,6 +1,3 @@
-import clsx from "clsx";
-
-import Button from "../../../artisan/Button";
 import Heading from "../../../artisan/Heading";
 import Text from "../../../artisan/Text";
 import Image from "next/image";
@@ -21,7 +18,7 @@ const Projects = () => {
         "Demonstrated active involvement in deploying web services on DigitalOcean, showcasing proficiency in ensuring smooth and error-free functionality in the production environment",
       ],
       thumb: typedashImage,
-      website: "https://typedash.raynertoh.dev/",
+      website: "",
       repo: "https://github.com/raynertjx/typedash",
     },
   ];
@@ -43,7 +40,7 @@ const Projects = () => {
         {projectObjs.map((proj) => (
           <div
             key={proj.name}
-            className="max-w-screen-lg border-white border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200 -z-10"
+            className="max-w-screen-lg border-white border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200"
           >
             <div className="w-full md:w-1/3 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
               <Image
@@ -58,20 +55,28 @@ const Projects = () => {
             <div className="w-full md:w-2/3 p-4 flex flex-col justify-center">
               <Text className="text-whip font-bold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
-                <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-blue-700 hover:underline">
-                  <a
-                    href={proj.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Website
-                  </a>
-                </span>
-                <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-blue-700 hover:underline">
-                  <a href={proj.repo} target="_blank" rel="noopener noreferrer">
-                    Repo
-                  </a>
-                </span>
+                {proj.website && (
+                  <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-blue-700 hover:underline">
+                    <a
+                      href={proj.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Website
+                    </a>
+                  </span>
+                )}
+                {proj.repo && (
+                  <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-blue-700 hover:underline">
+                    <a
+                      href={proj.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Repo
+                    </a>
+                  </span>
+                )}
               </Text>
               <ul className="list-disc text-white mt-2 text-sm md:text-base ml-5">
                 {proj.desc.map((point, index) => (

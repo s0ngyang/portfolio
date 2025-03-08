@@ -54,6 +54,7 @@ export default function Experience() {
           <li>
             Identified and promptly resolved authorisation security issues
           </li>
+          <li>Introduced CI/CD, implement features using Agile workflow</li>
         </ul>
       ),
     },
@@ -79,8 +80,8 @@ export default function Experience() {
             Hono.js and Supabase with PostgreSQL
           </li>
           <li>
-            Integrate AI using Whisper and OpenAI to process text audio, images
-            and videos
+            Integrate AI capabilities using Whisper and OpenAI to process text
+            audio, images and videos
           </li>
         </ul>
       ),
@@ -99,7 +100,7 @@ export default function Experience() {
       id="experience"
     >
       <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px] text-center">
-        EXPERIENCES
+        EXPERIENCE
       </Text>
       <Heading
         className="text-latte-700 my-4 text-[2em] md:text-[3.5em] font-extrabold text-center"
@@ -133,7 +134,7 @@ export default function Experience() {
               />
 
               <div className="flex-grow p-4 flex items-start flex-col ml-4 border-2 rounded-xl border-white">
-                <span className="flex items-end">
+                <span className="flex items-center gap-1">
                   <Text className="text-whip text-[1em] md:text-[1.25em] font-extrabold">
                     {comp.role}
                   </Text>
