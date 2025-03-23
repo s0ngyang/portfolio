@@ -1,6 +1,6 @@
 # a portfolio site
 
-built with next.js and Artisan UI.
+built with next.js and Artisan UI. domain from namecheap.
 
 www.songyang.dev
 
@@ -17,3 +17,4 @@ Then, run the development server:
 ```bash
 npm run dev
 ```
+
