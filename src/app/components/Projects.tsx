@@ -12,13 +12,13 @@ const Projects = () => {
     {
       name: "TypeDash",
       desc: [
-        "Frontend design implemented in React.js and Chakra UI",
+        "Minimalist frontend design implemented in React.js and Chakra UI",
         "Utilised Express.js and Prisma ORM to implement REST APIs",
-        "Implemented real-time updates using Socket.IO to display race results and leaderboard changes to users instantly",
-        "Demonstrated active involvement in deploying web services on DigitalOcean, showcasing proficiency in ensuring smooth and error-free functionality in the production environment",
+        "Leverage Socket.IO for real-time updates; display race results and live leaderboard changes to users",
+        "Wrote unit tests using Jest to ensure bug free iterations",
       ],
       thumb: typedashImage,
-      website: "",
+      website: "https://main--cosmic-fox-2ad203.netlify.app/singleplayer",
       repo: "https://github.com/raynertjx/typedash",
     },
   ];

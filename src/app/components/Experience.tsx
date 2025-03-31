@@ -14,14 +14,15 @@ export default function Experience() {
       desc: (
         <ul className="list-disc p-2">
           <li>
-            Topics taught: Functional Abstraction, Recursion, Orders of Growth,
-            Data Abstraction, OOP, Dynamic Programming
+            Collaborated closely with Prof. Tan Tiow Seng and fellow teaching
+            assistants to develop examination grading scheme to effectively
+            assess students&#39; understanding of programming methodology
+            concepts in the CS1010X course
           </li>
           <li>
-            Collaborated closely with Prof. Tan Tiow Seng and fellow teaching
-            assistants to develop comprehensive examination materials that
-            effectively assessed students&apos; understanding of programming
-            methodology concepts in the CS1010X course
+            Taught the following topics with strong mastery: Functional
+            Abstraction, Recursion, Orders of Growth, Data Abstraction, OOP,
+            Dynamic Programming
           </li>
           <li>
             Displayed strong mentoring abilities by building rapport with a
@@ -40,21 +41,24 @@ export default function Experience() {
       desc: (
         <ul className="list-disc p-2">
           <li>
-            Utilise Next.js with Shadcn UI to create an audio player from
-            scratch for a new episode page
+            Created an episode page with an integrated audio player from
+            scratch, utilising Next.js with Shadcn UI
           </li>
           <li>
-            Revamped users&apos; monthly usage tracking system using FastAPI,
-            Supabase with PostgreSQL
+            Developed a monthly user usage tracking system to accurately track
+            monthly subscription limits using FastAPI, Supabase with PostgreSQL
           </li>
           <li>
-            Extract custom modules using Modal GPU for transcription, Anthropic
-            and OpenAI to parse output
+            Extract user defined custom modules from podcasts using Modal GPU
+            for transcription, Anthropic and OpenAI to parse output
           </li>
           <li>
-            Identified and promptly resolved authorisation security issues
+            Identified and promptly resolved authorisation security issues in
+            the frontend and backend
           </li>
-          <li>Introduced CI/CD, implement features using Agile workflow</li>
+          <li>
+            Optimised API performance for episode page, reducing latency by 60%
+          </li>
         </ul>
       ),
     },
@@ -66,18 +70,20 @@ export default function Experience() {
       yearEnd: "Present",
       desc: (
         <ul className="list-disc p-2">
-          <li>Scope out functional requirements from weekly client meetings</li>
           <li>
             Launched an AI curriculum planner with AI termly report generations
-            used by over 20 centres for E-Bridge Pre-School
+            used by over 20 centres for E-Bridge Pre-School, reducing time spent
+            per report by 75%, by scoping functional requirements from weekly
+            client meetings
           </li>
           <li>
-            Design reusable components using React.js with TanStack and Mantine
-            UI
+            Developed user friendly UI by designing reusable components using
+            React.js with TanStack and Mantine UI
           </li>
           <li>
-            Devise schemas in Drizzle with Graphile Migrations, REST APIs with
-            Hono.js and Supabase with PostgreSQL
+            Designed flexible schemas in Drizzle ORM to adapt to changing
+            requirements and created REST APIs with Hono.js and Supabase with
+            PostgreSQL for effective data retrieval
           </li>
           <li>
             Integrate AI capabilities using Whisper and OpenAI to process text
