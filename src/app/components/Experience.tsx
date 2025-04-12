@@ -102,7 +102,7 @@ export default function Experience() {
 
   return (
     <div
-      className="md:p-12 py-20 max-w-screen-2xl md:min-h-screen flex justify-center flex-col"
+      className="py-20 max-w-screen-2xl flex justify-center flex-col"
       id="experience"
     >
       <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px] text-center">

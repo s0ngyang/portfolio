@@ -12,7 +12,7 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false); // Added loading state
 
   const textStyle =
-    "text-white text-[0.75em] font-semibold tracking-[0.45em] md:text-[0.875em]";
+    "text-white text-[0.75em] font-semibold tracking-[0.45em] lg:text-[0.875em]";
 
   function areFieldsFilled(
     name: string,
@@ -60,10 +60,13 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen" id="contact">
-      <div className="p-12 grid md:grid-cols-2 gap-4">
+    <div
+      className="flex w-full max-w-screen-2xl justify-center items-center min-h-screen"
+      id="contact"
+    >
+      <div className="grow p-12 grid lg:grid-cols-2 gap-4">
         <div className="flex-1 justify-between align-between">
-          <div className="flex flex-col text-center md:text-left">
+          <div className="flex flex-col text-center lg:text-left">
             <span className={textStyle}>THINK I’LL BE A GREAT </span>
             <span className={textStyle}>ADDITION TO YOUR TEAM? </span>
             <Heading
@@ -73,8 +76,8 @@ export default function ContactSection() {
             >
               Get in Touch.
             </Heading>
-            <div className="flex flex-col items-center md:items-start">
-              <hr className="w-[100%] md:w-[75%] bg-white mb-5" />
+            <div className="flex flex-col items-center lg:items-start">
+              <hr className="w-[100%] lg:w-[75%] bg-white mb-5" />
               <span className={`${textStyle} `}>FIND ME ON</span>
               <div className="my-4 ml-[-5px]">
                 <a
@@ -86,7 +89,7 @@ export default function ContactSection() {
                 </a>
                 <a
                   className={`${textStyle} transition-all transform ease-linear border-[1px] px-4 py-2 rounded-lg hover:bg-white hover:text-black`}
-                  href="https://www.linkedin.com/in/song-yang-kee-b02b67211/"
+                  href="https://www.linkedin.com/in/keesongyang"
                   target="_blank"
                 >
                   LINKEDIN
@@ -136,7 +139,7 @@ export default function ContactSection() {
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="bg-white/20 p-3 w-[100%] m-[-5px] text-white min-h-[200px] md:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
+                className="bg-white/20 p-3 w-[100%] m-[-5px] text-white min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
           </div>

@@ -1,11 +1,8 @@
 import Link from "next/link";
+import { useState } from "react";
 
-type NavBarProps = {
-  toggleNav: boolean;
-  setToggleNav: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const NavBar: React.FC<NavBarProps> = ({ toggleNav, setToggleNav }) => {
+const NavBar: React.FC = () => {
+  const [toggleNav, setToggleNav] = useState(false);
   const hyperlinkStyle =
     "text-white font-bold text-[0.85em] hover:text-khaki hover:font-bold mx-4 tracking-[0.2em] transition-all transform ease-linear";
 

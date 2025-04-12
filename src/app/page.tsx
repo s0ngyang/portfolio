@@ -1,5 +1,4 @@
 "use client";
-import clsx from "clsx";
 
 import { useEffect, useState } from "react";
 import Experience from "./components/Experience";
@@ -10,12 +9,7 @@ import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
 
 export default function Home() {
-  const [toggleNav, setToggleNav] = useState(false);
-
-  const text = [
-    "Aspiring Software Engineer",
-    "Penultimate Computer Science Student",
-  ];
+  const text = ["Software Engineer", "Penultimate Computer Science Student"];
   const [currWordIndex, setCurrWordIndex] = useState(0);
   const [currTextIndex, setCurrTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -48,22 +42,14 @@ export default function Home() {
 
   return (
     <div
-      className={clsx(
-        `flex items-center flex-col p-12 h-screen gap-y-8
-      sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl`,
-        "font-inter"
-      )}
+      className="flex items-center flex-col p-12 h-screen gap-y-8
+      sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl font-inter"
     >
       <ToastContainer />
-
-      <NavBar toggleNav={toggleNav} setToggleNav={setToggleNav} />
-
+      <NavBar />
       <Hero currentText={currentText} />
-
       <Experience />
-
       <Projects />
-
       <Contact />
     </div>
   );
