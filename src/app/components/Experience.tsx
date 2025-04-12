@@ -20,9 +20,9 @@ export default function Experience() {
             concepts in the CS1010X course
           </li>
           <li>
-            Taught the following topics with strong mastery: Functional
-            Abstraction, Recursion, Orders of Growth, Data Abstraction, OOP,
-            Dynamic Programming
+            Taught the following topics with strong mastery in Python and Java:
+            Functional Abstraction, Recursion, Orders of Growth, Data
+            Abstraction, OOP, Dynamic Programming
           </li>
           <li>
             Displayed strong mentoring abilities by building rapport with a
