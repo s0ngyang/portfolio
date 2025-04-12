@@ -116,13 +116,13 @@ export default function Experience() {
         I have worked at...
       </Heading>
 
-      <div className="hidden md:flex flex-wrap">
+      <div className="hidden md:flex flex-wrap max-w-screen-lg">
         {experiences
           .sort((a, b) => b.id - a.id)
           .map((comp) => (
             <div
               key={comp.id}
-              className="flex relative pt-8 pb-4 sm:items-center w-full sm:w-2/3 mx-auto"
+              className="flex relative pt-8 pb-4 sm:items-center w-full mx-auto"
             >
               <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
                 <div
@@ -172,7 +172,7 @@ export default function Experience() {
               <Text className="text-white text-[1em] md:text-[1.25em] font-extrabold">
                 <span className="text-whip">{comp.role}</span> @ {comp.name}
               </Text>
-              <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold my-2">
+              <Text className="text-white tracking-wider text-[0.875em] md:text-[1em] font-semibold my-2">
                 {comp.yearStart} - {comp.yearEnd}
               </Text>
               <Text className="text-white text-[0.75em] md:text-[0.875em] font-medium my-1">

@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <div
-      className={`flex flex-col px-4 md:px-12 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-lg`}
+      className="flex flex-col px-4 md:px-12 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-lg"
       id="projects"
     >
       <Heading
