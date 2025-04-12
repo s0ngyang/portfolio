@@ -106,12 +106,11 @@ export default function ContactSection() {
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div className="border-white border-2 rounded-2xl flex flex-col p-8 items-center">
+          <div className="border-white border-2 rounded-2xl flex flex-col p-8 items-center bg-neutral-800/70">
             <div className="w-[100%]">
               <span className={textStyle}>NAME</span>
               <TextInput
-                required
-                label="name"
+                label=""
                 type="text"
                 name="name"
                 value={name}
@@ -122,8 +121,7 @@ export default function ContactSection() {
             <div className="mt-4 w-[100%]">
               <span className={textStyle}>EMAIL</span>
               <TextInput
-                required
-                label="email"
+                label=""
                 type="email"
                 name="email"
                 value={email}
@@ -134,8 +132,7 @@ export default function ContactSection() {
             <div className="mt-4 w-[100%]">
               <span className={textStyle}>YOUR MESSAGE</span>
               <TextArea
-                required
-                label="message"
+                label=""
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}

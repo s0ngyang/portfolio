@@ -110,7 +110,7 @@ function TextArea(
           isLabelHidden
             ? "sr-only"
             : clsx(
-                "mb-1.5 block font-medium",
+                "mb-3 block font-medium",
                 "text-stone-700 dark:text-stone-300",
                 fontSizeClass
               )

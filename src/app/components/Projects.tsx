@@ -52,7 +52,7 @@ const Projects = () => {
               />
             </div>
 
-            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center">
+            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800/70">
               <Text className="text-whip font-bold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (

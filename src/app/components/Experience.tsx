@@ -122,7 +122,7 @@ export default function Experience() {
           .map((comp) => (
             <div
               key={comp.id}
-              className="flex relative pt-8 pb-4 sm:items-center w-full mx-auto"
+              className="flex relative pt-8 pb-4 sm:items-center w-full mx-auto "
             >
               <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
                 <div
@@ -139,7 +139,7 @@ export default function Experience() {
                 )}
               />
 
-              <div className="flex-grow p-4 flex items-start flex-col ml-4 border-2 rounded-xl border-white">
+              <div className="flex-grow p-4 flex items-start flex-col ml-4 border-2 rounded-xl bg-neutral-800/70 border-white">
                 <span className="flex items-center gap-1">
                   <Text className="text-whip text-[1em] md:text-[1.25em] font-extrabold">
                     {comp.role}
