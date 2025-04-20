@@ -12,8 +12,8 @@ const Projects = () => {
     {
       name: "TypeDash",
       desc: [
-        "Minimalist frontend design implemented in React.js and Chakra UI",
-        "Utilised Express.js and Prisma ORM to implement REST APIs",
+        "A type racing website with multiplayer features and customisable loadouts and statistics",
+        "Utilised Express.js and Prisma ORM to implement REST APIs, Passport.js for authentication middleware",
         "Leverage Socket.IO for real-time updates; display race results and live leaderboard changes to users",
         "Wrote unit tests using Jest to ensure bug free iterations",
       ],
