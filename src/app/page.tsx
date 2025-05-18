@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
 
 export default function Home() {
-  const text = ["Software Engineer", "Penultimate Computer Science Student"];
+  const text = ["Software Engineer", "Final Year Computer Science Student"];
   const [currWordIndex, setCurrWordIndex] = useState(0);
   const [currTextIndex, setCurrTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -32,12 +32,12 @@ export default function Home() {
           setIsDeleting(true);
           setCurrentText(currentText.substring(0, currentText.length - 1));
           setCurrTextIndex(currTextIndex - 1);
-        }, 1000);
+        }, 800);
       } else {
         setCurrentText(currentText + text[currWordIndex][currTextIndex]);
         setCurrTextIndex(currTextIndex + 1);
       }
-    }, 69);
+    }, 50);
   }, [currTextIndex, currWordIndex]);
 
   return (

@@ -89,6 +89,12 @@ export default function Experience() {
             Integrate AI capabilities using Whisper and OpenAI to process text
             audio, images and videos
           </li>
+          <li>Used Vue.js with Ruby on Rails to develop CRM platform</li>
+          <li>
+            Developed an internal platform to display micro frontend apps and
+            start a VS Code dev container in Kubernetes pod, improving developer
+            experience and iteration speed
+          </li>
         </ul>
       ),
     },

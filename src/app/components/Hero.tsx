@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
       <div className=" px-8 py-2 mt-5 min-w-[80px] min-h-[40px] flex justify-center items-center">
         <div className="overflow-hidden border-r-[.15em]">
           <Text
-            className="text-white tracking-[0.35em] max-md:text-[0.875em] font-semibold"
+            className="text-white tracking-[0.2em] max-md:text-[0.875em] font-semibold"
             id="typing-container"
           >
             {currentText}
