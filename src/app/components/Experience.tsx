@@ -71,23 +71,35 @@ export default function Experience() {
       desc: (
         <ul className="list-disc p-2">
           <li>
-            Launched an AI curriculum planner with AI termly report generations
-            used by over 20 centres for E-Bridge Pre-School, reducing time spent
-            per report by 75%, by scoping functional requirements from weekly
-            client meetings
+            Launched an AI curriculum planner by leading weekly customer
+            meetings and conducting demos. Iterated by gathering user feedback
+            and resolving production issues.
           </li>
           <li>
-            Developed user friendly UI by designing reusable components using
-            React.js with TanStack and Mantine UI
+            Developed a video-to-report tool using FFmpeg to scale and extract
+            frames, and OpenAI&apos;s GPT to identify students, reducing
+            teachers&apos; time spent per report by 75%
           </li>
           <li>
-            Designed flexible schemas in Drizzle ORM to adapt to changing
-            requirements and created REST APIs with Hono.js and Supabase with
-            PostgreSQL for effective data retrieval
+            Developed an admin portal to manage classes, lessons and learning
+            objectives using React.js with TanStack. Designed flexible schemas
+            in Drizzle ORM to adapt to changing requirements and created REST
+            APIs with Hono.js and Supabase with PostgreSQL for effective data
+            retrieval
           </li>
           <li>
-            Integrate AI capabilities using Whisper and OpenAI to process text
-            audio, images and videos
+            Successfully migrated customers across platforms by creating
+            scheduled CRON jobs with TypeScript to extract data from external
+            sources, ensuring data consistency through idempotency
+          </li>
+          <li>
+            Learnt Vue.js with Ruby on Rails from scratch to launch a WhatsApp
+            broadcast feature for CRM app within 2 weeks
+          </li>
+          <li>
+            Created an online VS Code editor by spinning up a Kubernetes pod on
+            demand and connecting via VS Code protocol, improving developer
+            experience
           </li>
           <li>Used Vue.js with Ruby on Rails to develop CRM platform</li>
           <li>
