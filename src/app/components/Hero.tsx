@@ -47,12 +47,6 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
           </Text>
         </div>
       </div>
-
-      <Text className="py-4 text-white max-w-screen-lg text-[0.875em] md:text-[1em] font-medium">
-        As a daily user of software applications, I value aesthetics and
-        responsiveness. <br /> My goal as a developer is to create performant
-        and intuitive applications, ensuring a delightful user experience.
-      </Text>
     </div>
   );
 };

@@ -15,7 +15,6 @@ const Projects = () => {
         "A type racing website with multiplayer features and customisable loadouts and statistics",
         "Utilised Express.js and Prisma ORM to implement REST APIs, Passport.js for authentication middleware",
         "Leverage Socket.IO for real-time updates; display race results and live leaderboard changes to users",
-        "Wrote unit tests using Jest to ensure bug free iterations",
       ],
       thumb: typedashImage,
       website: "https://main--cosmic-fox-2ad203.netlify.app/singleplayer",

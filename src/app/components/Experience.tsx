@@ -25,9 +25,9 @@ export default function Experience() {
             Abstraction, OOP, Dynamic Programming
           </li>
           <li>
-            Displayed strong mentoring abilities by building rapport with a
-            diverse group of 7 students, providing individualised guidance based
-            on their unique learning styles and skill levels
+            Displayed strong mentoring abilities by providing individualised
+            guidance to a group of 7 students, based on unique learning styles
+            and skill levels
           </li>
         </ul>
       ),
