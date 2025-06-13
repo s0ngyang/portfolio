@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
         </Link>
       </div>
 
-      <div className="fixed top-3 left-1 px-6 py-2 rounded-3xl block sm:hidden">
+      <div className="fixed top-3 left-1 px-6 py-2 rounded-3xl block sm:hidden z-50">
         <button onClick={() => setToggleNav(!toggleNav)}>
           <svg
             className="w-5 h-5"
@@ -50,7 +50,7 @@ const NavBar: React.FC = () => {
           </svg>
         </button>
         {toggleNav ? (
-          <div className="flex flex-col bg-[#00000095] border-[1px] border-white rounded-xl z-50">
+          <div className="flex flex-col bg-[#00000095] border-[1px] border-white rounded-xl">
             <Link
               href="#"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}
