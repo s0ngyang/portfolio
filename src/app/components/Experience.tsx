@@ -57,7 +57,8 @@ export default function Experience() {
             the frontend and backend
           </li>
           <li>
-            Optimised API performance for episode page, reducing latency by 60%
+            Optimised API performance for episode page by adding index to SQL
+            query, reducing latency by 60%
           </li>
         </ul>
       ),
