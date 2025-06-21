@@ -26,6 +26,8 @@ export default function RootLayout({
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
+        overscrollBehaviorY: "none",
+        overflowX: "auto",
       }}
     >
       <body className={`${inter.className} justify-center flex`}>
