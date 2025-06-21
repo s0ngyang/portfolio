@@ -68,7 +68,7 @@ export default function Experience() {
       name: "Voltade",
       role: "Software Engineer Intern",
       yearStart: "Jan 2025",
-      yearEnd: "Present",
+      yearEnd: "Jun 2025",
       desc: (
         <ul className="list-disc p-2">
           <li>
