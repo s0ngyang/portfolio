@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const NavBar: React.FC = () => {
   const [toggleNav, setToggleNav] = useState(false);
+
   const hyperlinkStyle =
     "text-white font-bold text-[0.85em] hover:text-khaki hover:font-bold mx-4 tracking-[0.2em] transition-all transform ease-linear";
 
@@ -22,7 +23,7 @@ const NavBar: React.FC = () => {
           Contact
         </Link>
         <Link
-          href="https://docs.google.com/document/d/1J6cObFEEi07tlUyUVHg0gR59sepOA1EI/edit?usp=sharing&ouid=103492402217116028456&rtpof=true&sd=true"
+          href="/KeeSongYang_Resume.pdf"
           target="_blank"
           className={hyperlinkStyle}
         >
@@ -76,7 +77,7 @@ const NavBar: React.FC = () => {
               Contact
             </Link>
             <Link
-              href="https://docs.google.com/document/d/1J6cObFEEi07tlUyUVHg0gR59sepOA1EI/edit?usp=sharing&ouid=103492402217116028456&rtpof=true&sd=true"
+              href="/KeeSongYang_Resume.pdf"
               target="_blank"
               className={`${hyperlinkStyle} p-2 pb-4`}
             >

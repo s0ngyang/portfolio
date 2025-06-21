@@ -37,7 +37,7 @@ export default function Home() {
         setCurrentText(currentText + text[currWordIndex][currTextIndex]);
         setCurrTextIndex(currTextIndex + 1);
       }
-    }, 50);
+    }, 35);
   }, [currTextIndex, currWordIndex]);
 
   return (
