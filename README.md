@@ -8,14 +8,20 @@ built with next.js and Artisan UI.
 
 ## Getting Started
 
-First,
+### Install dependencies
 
-```bash
-npm i
+```sh
+pnpm install
 ```
 
-Then, run the development server:
+### Run the development server
 
-```bash
-npm run dev
+```sh
+pnpm dev
+```
+
+### Build for production
+
+```sh
+pnpm build
 ```
