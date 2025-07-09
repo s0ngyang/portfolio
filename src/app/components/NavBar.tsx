@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
           Contact
         </Link>
         <Link
-          href="/KeeSongYang_Resume.pdf"
+          href="/keesongyang_resume.pdf"
           target="_blank"
           className={hyperlinkStyle}
         >
