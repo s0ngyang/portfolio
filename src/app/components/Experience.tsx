@@ -14,20 +14,9 @@ export default function Experience() {
       desc: (
         <ul className="list-disc p-2">
           <li>
-            Collaborated closely with Prof. Tan Tiow Seng and fellow teaching
-            assistants to develop examination grading scheme to effectively
-            assess students&#39; understanding of programming methodology
-            concepts in the CS1010X course
-          </li>
-          <li>
-            Taught the following topics with strong mastery in Python and Java:
-            Functional Abstraction, Recursion, Orders of Growth, Data
-            Abstraction, OOP, Dynamic Programming
-          </li>
-          <li>
-            Displayed strong mentoring abilities by providing individualised
-            guidance to a group of 7 students, based on unique learning styles
-            and skill levels
+            Collaborated closely with Prof. Tan Tiow Seng to develop examination
+            grading scheme for the CS1010X Programming Methodology course,
+            taught OOP, Dynamic Programming in Python and Java
           </li>
         </ul>
       ),
@@ -41,24 +30,24 @@ export default function Experience() {
       desc: (
         <ul className="list-disc p-2">
           <li>
-            Created an episode page with an integrated audio player from
-            scratch, utilising Next.js with Shadcn UI
+            Built an intuitive audio player in React, enabling UX through
+            progress bar markers for key topics, synchronized playback with
+            transcript timestamps, and direct audio jumps to identified entities
           </li>
           <li>
-            Developed a monthly user usage tracking system to accurately track
-            monthly subscription limits using FastAPI, Supabase with PostgreSQL
+            Devised a usage tracking schema using FastAPI, Supabase with
+            PostgreSQL to precisely track and enforce user monthly podcast
+            summarisation limits, eliminating a loophole that allowed unlimited
+            access to transcribed episodes
           </li>
           <li>
-            Extract user defined custom modules from podcasts using Modal GPU
-            for transcription, Anthropic and OpenAI to parse output
-          </li>
-          <li>
-            Identified and promptly resolved authorisation security issues in
-            the frontend and backend
+            Resolved a critical authorization flaw by implementing role-based
+            access control middleware using JWT, preventing free-tier users from
+            accessing premium features
           </li>
           <li>
             Optimised API performance for episode page by adding index to SQL
-            query, reducing latency by 60%
+            query, which sped up page loading by 60%
           </li>
         </ul>
       ),
@@ -72,41 +61,42 @@ export default function Experience() {
       desc: (
         <ul className="list-disc p-2">
           <li>
-            Launched an AI curriculum planner by leading weekly customer
-            meetings and conducting demos. Iterated by gathering user feedback
-            and resolving production issues.
+            Led the launch of an AI curriculum planner adopted by 200 users
+            across 28 preschool branches by running weekly customer meetings,
+            live demos, and continuous feedback loops; resolved production
+            issues
           </li>
           <li>
-            Developed a video-to-report tool using FFmpeg to scale and extract
-            frames, and OpenAI&apos;s GPT to identify students, reducing
-            teachers&apos; time spent per report by 75%
+            Developed a video-to-report tool using React with TanStack, FFmpeg
+            to scale and extract frames, and OpenAI GPT to identify students,
+            reducing teachers’ time spent per report by 75%
           </li>
           <li>
-            Developed an admin portal to manage classes, lessons and learning
-            objectives using React.js with TanStack. Designed flexible schemas
-            in Drizzle ORM to adapt to changing requirements and created REST
-            APIs with Hono.js and Supabase with PostgreSQL for effective data
-            retrieval
+            Automated customer migration across platforms by creating CRON jobs
+            in TypeScript to extract data from external sources, implementing
+            idempotent logic to ensure consistency across 20000+ records
           </li>
           <li>
-            Successfully migrated customers across platforms by creating
-            scheduled CRON jobs with TypeScript to extract data from external
-            sources, ensuring data consistency through idempotency
+            Learnt Vue and Ruby on Rails from scratch within 2 weeks to launch a
+            WhatsApp broadcast feature for CRM app, enabling clients to
+            instantly launch marketing campaigns to 500+ customers
           </li>
+        </ul>
+      ),
+    },
+    {
+      id: 3,
+      name: "Ola Chat",
+      role: "Software Engineer Intern",
+      yearStart: "Jul 2025",
+      yearEnd: "Present",
+      desc: (
+        <ul className="list-disc p-2">
           <li>
-            Learnt Vue.js with Ruby on Rails from scratch to launch a WhatsApp
-            broadcast feature for CRM app within 2 weeks
-          </li>
-          <li>
-            Created an online VS Code editor by spinning up a Kubernetes pod on
-            demand and connecting via VS Code protocol, improving developer
-            experience
-          </li>
-          <li>Used Vue.js with Ruby on Rails to develop CRM platform</li>
-          <li>
-            Developed an internal platform to display micro frontend apps and
-            start a VS Code dev container in Kubernetes pod, improving developer
-            experience and iteration speed
+            Built a mobile-responsive static React page using Vite that
+            dynamically loads domain-specific assets across 3 domains,
+            streamlining deployment workflows and reducing configuration
+            complexity
           </li>
         </ul>
       ),

@@ -2,6 +2,7 @@ import Heading from "../../../artisan/Heading";
 import Text from "../../../artisan/Text";
 import Image from "next/image";
 import typedashImage from "../../assets/typedash.jpeg";
+import exportifellasImage from "../../assets/exportifellas.png";
 
 const Projects = () => {
   const handleViewProject = (projectUrl: string | undefined) => {
@@ -10,15 +11,32 @@ const Projects = () => {
 
   const projectObjs = [
     {
-      name: "TypeDash",
+      name: "TypeDash V2",
       desc: [
-        "A type racing website with multiplayer features and customisable loadouts and statistics",
-        "Utilised Express.js and Prisma ORM to implement REST APIs, Passport.js for authentication middleware",
-        "Leverage Socket.IO for real-time updates; display race results and live leaderboard changes to users",
+        "Revamping a real-time type racing web app with single and multiplayer modes, adding typing statistics tracking to enhance user engagement and performance insights",
+        "Migrating backend from Express.js to Golang for better concurrency support; implementing a Redis-powered leaderboard system for real-time ranking updates",
+        "Built with React and WebSockets using Socket.IO to broadcast live typing progress to users in real time",
       ],
-      thumb: typedashImage,
-      website: "https://main--cosmic-fox-2ad203.netlify.app/singleplayer",
-      repo: "https://github.com/raynertjx/typedash",
+      thumb: {
+        src: typedashImage,
+        width: 1530,
+        height: 1500,
+      },
+      website: "https://typedash.songyang.dev",
+      repo: "https://github.com/clickclackers/typedash-v2",
+    },
+    {
+      name: "Exportifellas",
+      desc: [
+        "Built a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall, streamlining the song voting process for all future performances",
+      ],
+      thumb: {
+        src: exportifellasImage,
+        width: 3024,
+        height: 1714,
+      },
+      website: "https://s0ngyang.github.io/exportifellas",
+      repo: "https://github.com/s0ngyang/exportifellas",
     },
   ];
 
@@ -35,7 +53,7 @@ const Projects = () => {
         Projects
       </Heading>
 
-      <div className="grid grid-cols-1 mt-10 gap-5 w-full">
+      <div className="grid grid-cols-1 mt-10 gap-10 w-full">
         {projectObjs.map((proj) => (
           <div
             key={proj.name}
@@ -45,9 +63,9 @@ const Projects = () => {
               <Image
                 className="object-cover h-full"
                 src={proj.thumb.src}
-                width={1530}
-                height={1500}
-                alt="TypeDash thumbnail"
+                width={proj.thumb.width}
+                height={proj.thumb.height}
+                alt={proj.name}
               />
             </div>
 
