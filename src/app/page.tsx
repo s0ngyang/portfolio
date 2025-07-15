@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Experience from "./components/Experience";
-import Hero from "./components/Hero";
-import NavBar from "./components/NavBar";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Experience from "../components/Experience";
+import Hero from "../components/Hero";
+import NavBar from "../components/NavBar";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 import { ToastContainer } from "react-toastify";
 
 export default function Home() {

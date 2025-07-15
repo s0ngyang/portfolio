@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
-import Heading from "../../../artisan/Heading";
-import Text from "../../../artisan/Text";
+import Heading from "../artisan/Heading";
+import Text from "../artisan/Text";
 
 export default function Experience() {
   const experiences = [

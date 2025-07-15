@@ -1,7 +1,7 @@
-import Heading from "../../../artisan/Heading";
-import Text from "../../../artisan/Text";
+import Heading from "../artisan/Heading";
+import Text from "../artisan/Text";
 import Image from "next/image";
-import displayPhoto from "../../assets/display photo.jpeg";
+import profilePhoto from "../assets/profile.jpeg";
 
 type HeroProps = {
   currentText: string;
@@ -13,14 +13,12 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
       className="flex flex-col w-full items-center justify-center text-center md:min-h-screen md:-mt-20"
       id="hero"
     >
-      <div className="w-[200px] h-[200px] overflow-hidden rounded-full mb-6">
+      <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6">
         <Image
-          className="object-center"
-          src={displayPhoto.src}
-          width={200}
-          height={200}
-          alt="Display photo"
-          layout="fixed"
+          src={profilePhoto.src}
+          width={3000}
+          height={3000}
+          alt="Profile Photo"
         />
       </div>
 

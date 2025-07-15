@@ -1,8 +1,8 @@
-import Heading from "../../../artisan/Heading";
-import Text from "../../../artisan/Text";
+import Heading from "../artisan/Heading";
+import Text from "../artisan/Text";
 import Image from "next/image";
-import typedashImage from "../../assets/typedash.jpeg";
-import exportifellasImage from "../../assets/exportifellas.png";
+import typedashImage from "../assets/typedash.jpeg";
+import exportifellasImage from "../assets/exportifellas.png";
 
 const Projects = () => {
   const handleViewProject = (projectUrl: string | undefined) => {
@@ -69,7 +69,7 @@ const Projects = () => {
               />
             </div>
 
-            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800/70">
+            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800/70 rounded-2xl">
               <Text className="text-whip font-bold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (

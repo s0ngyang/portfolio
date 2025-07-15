@@ -1,9 +1,8 @@
 import React, { useState, FormEventHandler } from "react";
-import TextArea from "../../../artisan/TextArea";
-import TextInput from "../../../artisan/TextInput";
-import Heading from "../../../artisan/Heading";
+import TextArea from "../artisan/TextArea";
+import TextInput from "../artisan/TextInput";
+import Heading from "../artisan/Heading";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactSection() {
   const [name, setName] = useState("");
