@@ -51,7 +51,7 @@ const NavBar: React.FC = () => {
           </svg>
         </button>
         {toggleNav ? (
-          <div className="flex flex-col bg-[#00000095] border-[1px] border-white rounded-xl">
+          <div className="flex flex-col bg-[#000000C0] border-[1px] border-white rounded-xl -ml-1 mt-1">
             <Link
               href="#"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}
