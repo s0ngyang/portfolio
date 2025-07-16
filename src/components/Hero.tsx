@@ -1,7 +1,7 @@
 import Heading from "../artisan/Heading";
 import Text from "../artisan/Text";
 import Image from "next/image";
-import profilePhoto from "../assets/profile.jpeg";
+import profilePhoto from "../assets/profile.webp";
 
 type HeroProps = {
   currentText: string;

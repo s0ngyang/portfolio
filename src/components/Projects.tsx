@@ -1,8 +1,8 @@
 import Heading from "../artisan/Heading";
 import Text from "../artisan/Text";
 import Image from "next/image";
-import typedashImage from "../assets/typedash.jpeg";
-import exportifellasImage from "../assets/exportifellas.png";
+import typedashImage from "../assets/typedash.webp";
+import exportifellasImage from "../assets/exportifellas.webp";
 
 const Projects = () => {
   const handleViewProject = (projectUrl: string | undefined) => {
