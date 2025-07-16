@@ -19,18 +19,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      style={{
-        background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url(/background.webp)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        overscrollBehaviorY: "none",
-        overflowX: "auto",
-      }}
-    >
-      <body className={`${inter.className} justify-center flex`}>
+    <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/background.webp" />
+      </head>
+      <body
+        style={{
+          background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url(/background.webp)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          overscrollBehaviorY: "none",
+          overflowX: "auto",
+        }}
+        className={`${inter.className} justify-center flex`}
+      >
         {children}
       </body>
     </html>

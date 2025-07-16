@@ -16,9 +16,10 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
       <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6">
         <Image
           src={profilePhoto.src}
-          width={3000}
-          height={3000}
+          width={300}
+          height={300}
           alt="Profile Photo"
+          loading="eager"
         />
       </div>
 
