@@ -1,5 +1,3 @@
-import clsx from "clsx";
-
 import Heading from "../artisan/Heading";
 import Text from "../artisan/Text";
 
@@ -118,30 +116,20 @@ export default function Experience() {
         I have worked at...
       </Heading>
 
-      <div className="hidden md:flex flex-wrap max-w-screen-lg">
+      <div className="md:flex flex-wrap max-w-screen-lg">
         {experiences
           .sort((a, b) => b.id - a.id)
           .map((comp) => (
             <div
               key={comp.id}
-              className="flex relative pt-8 pb-4 sm:items-center w-full mx-auto "
+              className="flex relative py-4 sm:items-center w-full mx-auto "
             >
-              <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
-                <div
-                  className={clsx(
-                    "bg-latte dark:bg-latte",
-                    "h-full w-1 pointer-events-none"
-                  )}
-                />
+              <div className="hidden md:flex h-full w-6 absolute inset-0 items-center justify-center">
+                <div className="bg-latte h-full w-1 pointer-events-none" />
               </div>
-              <div
-                className={clsx(
-                  "bg-khaki-300 dark:bg-khaki-300 border-white border-[3px]",
-                  "flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center relative z-10"
-                )}
-              />
+              <div className="hidden md:inline-flex bg-khaki-300 border-white border-[3px] flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0  items-center justify-center relative z-10" />
 
-              <div className="flex-grow p-4 flex items-start flex-col ml-4 border-2 rounded-xl bg-neutral-800/70 border-white">
+              <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border-[1px] md:border-2 rounded-xl bg-neutral-800/70 border-white">
                 <span className="flex items-center gap-1">
                   <Text className="text-whip text-[1em] md:text-[1.25em] font-extrabold">
                     {comp.role}
@@ -160,27 +148,6 @@ export default function Experience() {
                   </Text>
                 </div>
               </div>
-            </div>
-          ))}
-      </div>
-
-      <div className="flex flex-col md:hidden">
-        {experiences
-          .sort((a, b) => b.id - a.id)
-          .map((comp) => (
-            <div
-              className="flex flex-col justify-start border-white border-[1px] rounded-lg p-4 mb-4 transition-all ease-in"
-              key={comp.id}
-            >
-              <Text className="text-white text-[1em] md:text-[1.25em] font-extrabold">
-                <span className="text-whip">{comp.role}</span> @ {comp.name}
-              </Text>
-              <Text className="text-white tracking-wider text-[0.875em] md:text-[1em] font-semibold my-2">
-                {comp.yearStart} - {comp.yearEnd}
-              </Text>
-              <Text className="text-white text-[0.75em] md:text-[0.875em] font-medium my-1">
-                {comp.desc}
-              </Text>
             </div>
           ))}
       </div>

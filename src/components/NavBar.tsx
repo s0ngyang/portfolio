@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <div className="fixed top-5 bg-[#00000095] px-6 py-2 rounded-3xl hidden md:block z-50">
+      <div className="fixed top-5 bg-black bg-opacity-70  px-6 py-2 rounded-3xl hidden md:block z-50">
         <Link href="#hero" className={hyperlinkStyle}>
           Home
         </Link>
@@ -70,7 +70,7 @@ const NavBar: React.FC = () => {
           </svg>
         </button>
         {toggleNav ? (
-          <div className="flex flex-col bg-[#000000C0] border-[1px] border-white rounded-xl -ml-1 mt-1">
+          <div className="flex flex-col bg-black bg-opacity-80 border-[1px] border-white rounded-xl -ml-1 mt-1">
             <Link
               href="#"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}

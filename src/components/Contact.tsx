@@ -106,7 +106,7 @@ export default function ContactSection() {
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div className="border-white border-2 rounded-2xl flex flex-col p-8 items-center bg-neutral-800/70">
+          <div className="border-white border-[1px] md:border-2 rounded-2xl flex flex-col p-8 items-center bg-neutral-800/70">
             <div className="w-full flex flex-col gap-y-2">
               <p className={textStyle}>NAME</p>
               <TextInput
