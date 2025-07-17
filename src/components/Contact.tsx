@@ -3,15 +3,16 @@ import TextArea from "../artisan/TextArea";
 import TextInput from "../artisan/TextInput";
 import Heading from "../artisan/Heading";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const textStyle =
+  "text-white text-[0.75em] font-semibold tracking-[0.45em] lg:text-[0.875em]";
 
 export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false); // Added loading state
-
-  const textStyle =
-    "text-white text-[0.75em] font-semibold tracking-[0.45em] lg:text-[0.875em]";
 
   function areFieldsFilled(
     name: string,

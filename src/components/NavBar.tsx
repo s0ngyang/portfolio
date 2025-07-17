@@ -1,11 +1,30 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+
+const hyperlinkStyle =
+  "text-white font-bold text-[0.85em] hover:text-khaki hover:font-bold mx-4 tracking-[0.2em] transition-all transform ease-linear";
 
 const NavBar: React.FC = () => {
   const [toggleNav, setToggleNav] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const hyperlinkStyle =
-    "text-white font-bold text-[0.85em] hover:text-khaki hover:font-bold mx-4 tracking-[0.2em] transition-all transform ease-linear";
+  useEffect(() => {
+    if (!toggleNav) return;
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setToggleNav(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [toggleNav]);
 
   return (
     <>
@@ -31,12 +50,14 @@ const NavBar: React.FC = () => {
         </Link>
       </div>
 
-      <div className="fixed top-3 left-1 px-6 py-2 rounded-3xl block sm:hidden z-50">
+      <div
+        className="fixed top-5 left-0 px-6 py-2 rounded-3xl block sm:hidden z-50"
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
+      >
         <button onClick={() => setToggleNav(!toggleNav)}>
           <svg
             className="w-5 h-5"
             aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 17 14"
           >
@@ -51,28 +72,35 @@ const NavBar: React.FC = () => {
           </svg>
         </button>
         {toggleNav ? (
-          <div className="flex flex-col bg-[#000000C0] border-[1px] border-white rounded-xl -ml-1 mt-1">
+          <div
+            ref={dropdownRef}
+            className="flex flex-col bg-[#000000C0] border-[1px] border-white rounded-xl -ml-1 mt-1"
+          >
             <Link
               href="#"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}
+              onClick={() => setToggleNav(false)}
             >
               Home
             </Link>
             <Link
               href="#experience"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
+              onClick={() => setToggleNav(false)}
             >
               Experience
             </Link>
             <Link
               href="#projects"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
+              onClick={() => setToggleNav(false)}
             >
               Projects
             </Link>
             <Link
               href="#contact"
               className={`${hyperlinkStyle} p-2 border-b-[0.5px] border-white`}
+              onClick={() => setToggleNav(false)}
             >
               Contact
             </Link>
@@ -80,6 +108,7 @@ const NavBar: React.FC = () => {
               href="/KeeSongYang_Resume.pdf"
               target="_blank"
               className={`${hyperlinkStyle} p-2 pb-4`}
+              onClick={() => setToggleNav(false)}
             >
               Resume
             </Link>

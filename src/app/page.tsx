@@ -8,8 +8,9 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import { ToastContainer } from "react-toastify";
 
+const text = ["Software Engineer", "Final Year Computer Science Student"];
+
 export default function Home() {
-  const text = ["Software Engineer", "Final Year Computer Science Student"];
   const [currWordIndex, setCurrWordIndex] = useState(0);
   const [currTextIndex, setCurrTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -41,16 +42,15 @@ export default function Home() {
   }, [currTextIndex, currWordIndex]);
 
   return (
-    <div
-      className="flex items-center flex-col p-12 h-screen gap-y-8
-      sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl font-inter"
-    >
+    <>
       <ToastContainer />
-      <NavBar />
-      <Hero currentText={currentText} />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+      <div className="flex items-center flex-col p-12 gap-y-8 sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl font-inter">
+        <NavBar />
+        <Hero currentText={currentText} />
+        <Experience />
+        <Projects />
+        <Contact />
+      </div>
+    </>
   );
 }
