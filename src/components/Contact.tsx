@@ -107,43 +107,38 @@ export default function ContactSection() {
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="border-white border-2 rounded-2xl flex flex-col p-8 items-center bg-neutral-800/70">
-            <div className="w-[100%]">
-              <span className={textStyle}>NAME</span>
+            <div className="w-full flex flex-col gap-y-2">
+              <p className={textStyle}>NAME</p>
               <TextInput
                 label=""
                 type="text"
                 name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="bg-white/20 w-[100%] p-3 m-[-5px] text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
+                className="bg-white/20 w-full p-3 text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
-            </div>
-            <div className="mt-4 w-[100%]">
-              <span className={textStyle}>EMAIL</span>
+              <p className={textStyle}>EMAIL</p>
               <TextInput
                 label=""
                 type="email"
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/20 p-3 w-[100%] m-[-5px] text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
+                className="bg-white/20 p-3 w-full text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
-            </div>
-            <div className="mt-4 w-[100%]">
-              <span className={textStyle}>YOUR MESSAGE</span>
+              <p className={textStyle}>YOUR MESSAGE</p>
               <TextArea
                 label=""
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="bg-white/20 p-3 w-[100%] m-[-5px] text-white min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
+                className="bg-white/20 p-3 w-full text-white min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
           </div>
           <div className="mt-4 flex justify-center">
             <button
               type="submit"
-              // disabled={loading || !areFieldsFilled(name, email, message)} // Disable if loading or any field is empty
               className={`${textStyle} border-[1px] px-4 py-2 rounded-lg mr-3 ${
                 loading || !areFieldsFilled(name, email, message)
                   ? "opacity-20 cursor-not-allowed"

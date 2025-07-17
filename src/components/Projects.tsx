@@ -4,45 +4,41 @@ import Image from "next/image";
 import typedashImage from "../assets/typedash.webp";
 import exportifellasImage from "../assets/exportifellas.webp";
 
+const projectObjs = [
+  {
+    name: "TypeDash V2",
+    desc: [
+      "Revamping a real-time type racing web app with single and multiplayer modes, adding typing statistics tracking to enhance user engagement and performance insights",
+      "Migrating backend from Express.js to Golang for better concurrency support; implementing a Redis-powered leaderboard system for real-time ranking updates",
+      "Built with React and WebSockets using Socket.IO to broadcast live typing progress to users in real time",
+    ],
+    thumb: {
+      src: typedashImage,
+      width: 1530,
+      height: 1500,
+    },
+    website: "https://typedash.songyang.dev",
+    repo: "https://github.com/clickclackers/typedash-v2",
+  },
+  {
+    name: "Exportifellas",
+    desc: [
+      "Built a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall, streamlining the song voting process for all future performances",
+    ],
+    thumb: {
+      src: exportifellasImage,
+      width: 3024,
+      height: 1714,
+    },
+    website: "https://s0ngyang.github.io/exportifellas",
+    repo: "https://github.com/s0ngyang/exportifellas",
+  },
+];
+
 const Projects = () => {
-  const handleViewProject = (projectUrl: string | undefined) => {
-    window.open(projectUrl, "_blank");
-  };
-
-  const projectObjs = [
-    {
-      name: "TypeDash V2",
-      desc: [
-        "Revamping a real-time type racing web app with single and multiplayer modes, adding typing statistics tracking to enhance user engagement and performance insights",
-        "Migrating backend from Express.js to Golang for better concurrency support; implementing a Redis-powered leaderboard system for real-time ranking updates",
-        "Built with React and WebSockets using Socket.IO to broadcast live typing progress to users in real time",
-      ],
-      thumb: {
-        src: typedashImage,
-        width: 1530,
-        height: 1500,
-      },
-      website: "https://typedash.songyang.dev",
-      repo: "https://github.com/clickclackers/typedash-v2",
-    },
-    {
-      name: "Exportifellas",
-      desc: [
-        "Built a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall, streamlining the song voting process for all future performances",
-      ],
-      thumb: {
-        src: exportifellasImage,
-        width: 3024,
-        height: 1714,
-      },
-      website: "https://s0ngyang.github.io/exportifellas",
-      repo: "https://github.com/s0ngyang/exportifellas",
-    },
-  ];
-
   return (
     <div
-      className="flex flex-col px-4 md:px-12 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-lg"
+      className="flex flex-col px-4 md:px-12 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
       id="projects"
     >
       <Heading

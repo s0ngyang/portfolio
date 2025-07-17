@@ -6,15 +6,12 @@ const hyperlinkStyle =
 
 const NavBar: React.FC = () => {
   const [toggleNav, setToggleNav] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!toggleNav) return;
     function handleClickOutside(event: MouseEvent | TouchEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setToggleNav(false);
       }
     }
@@ -28,7 +25,7 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <div className="fixed top-5 bg-[#00000095] px-6 py-2 rounded-3xl hidden sm:block z-50">
+      <div className="fixed top-5 bg-[#00000095] px-6 py-2 rounded-3xl hidden md:block z-50">
         <Link href="#hero" className={hyperlinkStyle}>
           Home
         </Link>
@@ -51,8 +48,9 @@ const NavBar: React.FC = () => {
       </div>
 
       <div
-        className="fixed top-5 left-0 px-6 py-2 rounded-3xl block sm:hidden z-50"
+        className="fixed top-5 left-0 px-6 py-2 rounded-3xl block md:hidden z-50"
         style={{ paddingTop: "env(safe-area-inset-top)" }}
+        ref={navRef}
       >
         <button onClick={() => setToggleNav(!toggleNav)}>
           <svg
@@ -72,10 +70,7 @@ const NavBar: React.FC = () => {
           </svg>
         </button>
         {toggleNav ? (
-          <div
-            ref={dropdownRef}
-            className="flex flex-col bg-[#000000C0] border-[1px] border-white rounded-xl -ml-1 mt-1"
-          >
+          <div className="flex flex-col bg-[#000000C0] border-[1px] border-white rounded-xl -ml-1 mt-1">
             <Link
               href="#"
               className={`${hyperlinkStyle} p-2 pt-4 border-b-[0.5px] border-white`}

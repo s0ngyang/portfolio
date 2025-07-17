@@ -3,112 +3,105 @@ import clsx from "clsx";
 import Heading from "../artisan/Heading";
 import Text from "../artisan/Text";
 
+const experiences = [
+  {
+    id: 0,
+    name: "National University of Singapore",
+    role: "Teaching Assistant",
+    yearStart: "Jan 2023",
+    yearEnd: "Jun 2023",
+    desc: (
+      <ul className="list-disc p-2">
+        <li>
+          Collaborated closely with Prof. Tan Tiow Seng to develop examination
+          grading scheme for the CS1010X Programming Methodology course, taught
+          OOP, Dynamic Programming in Python and Java
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: 1,
+    name: "Podsmart AI",
+    role: "Software Engineer Intern",
+    yearStart: "May 2024",
+    yearEnd: "Aug 2024",
+    desc: (
+      <ul className="list-disc p-2">
+        <li>
+          Built an intuitive audio player in React, enabling UX through progress
+          bar markers for key topics, synchronized playback with transcript
+          timestamps, and direct audio jumps to identified entities
+        </li>
+        <li>
+          Devised a usage tracking schema using FastAPI, Supabase with
+          PostgreSQL to precisely track and enforce user monthly podcast
+          summarisation limits, eliminating a loophole that allowed unlimited
+          access to transcribed episodes
+        </li>
+        <li>
+          Resolved a critical authorization flaw by implementing role-based
+          access control middleware using JWT, preventing free-tier users from
+          accessing premium features
+        </li>
+        <li>
+          Optimised API performance for episode page by adding index to SQL
+          query, which sped up page loading by 60%
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: 2,
+    name: "Voltade",
+    role: "Software Engineer Intern",
+    yearStart: "Jan 2025",
+    yearEnd: "Jun 2025",
+    desc: (
+      <ul className="list-disc p-2">
+        <li>
+          Led the launch of an AI curriculum planner adopted by 200 users across
+          28 preschool branches by running weekly customer meetings, live demos,
+          and continuous feedback loops; resolved production issues
+        </li>
+        <li>
+          Developed a video-to-report tool using React with TanStack, FFmpeg to
+          scale and extract frames, and OpenAI GPT to identify students,
+          reducing teachers’ time spent per report by 75%
+        </li>
+        <li>
+          Automated customer migration across platforms by creating CRON jobs in
+          TypeScript to extract data from external sources, implementing
+          idempotent logic to ensure consistency across 20000+ records
+        </li>
+        <li>
+          Learnt Vue and Ruby on Rails from scratch within 2 weeks to launch a
+          WhatsApp broadcast feature for CRM app, enabling clients to instantly
+          launch marketing campaigns to 500+ customers
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: 3,
+    name: "Ola Chat",
+    role: "Software Engineer Intern",
+    yearStart: "Jul 2025",
+    yearEnd: "Present",
+    desc: (
+      <ul className="list-disc p-2">
+        <li>
+          Built a mobile-responsive static React page using Vite that
+          dynamically loads domain-specific assets across 3 domains,
+          streamlining deployment workflows and reducing configuration
+          complexity
+        </li>
+      </ul>
+    ),
+  },
+];
+
 export default function Experience() {
-  const experiences = [
-    {
-      id: 0,
-      name: "National University of Singapore",
-      role: "Teaching Assistant",
-      yearStart: "Jan 2023",
-      yearEnd: "Jun 2023",
-      desc: (
-        <ul className="list-disc p-2">
-          <li>
-            Collaborated closely with Prof. Tan Tiow Seng to develop examination
-            grading scheme for the CS1010X Programming Methodology course,
-            taught OOP, Dynamic Programming in Python and Java
-          </li>
-        </ul>
-      ),
-    },
-    {
-      id: 1,
-      name: "Podsmart AI",
-      role: "Software Engineer Intern",
-      yearStart: "May 2024",
-      yearEnd: "Aug 2024",
-      desc: (
-        <ul className="list-disc p-2">
-          <li>
-            Built an intuitive audio player in React, enabling UX through
-            progress bar markers for key topics, synchronized playback with
-            transcript timestamps, and direct audio jumps to identified entities
-          </li>
-          <li>
-            Devised a usage tracking schema using FastAPI, Supabase with
-            PostgreSQL to precisely track and enforce user monthly podcast
-            summarisation limits, eliminating a loophole that allowed unlimited
-            access to transcribed episodes
-          </li>
-          <li>
-            Resolved a critical authorization flaw by implementing role-based
-            access control middleware using JWT, preventing free-tier users from
-            accessing premium features
-          </li>
-          <li>
-            Optimised API performance for episode page by adding index to SQL
-            query, which sped up page loading by 60%
-          </li>
-        </ul>
-      ),
-    },
-    {
-      id: 2,
-      name: "Voltade",
-      role: "Software Engineer Intern",
-      yearStart: "Jan 2025",
-      yearEnd: "Jun 2025",
-      desc: (
-        <ul className="list-disc p-2">
-          <li>
-            Led the launch of an AI curriculum planner adopted by 200 users
-            across 28 preschool branches by running weekly customer meetings,
-            live demos, and continuous feedback loops; resolved production
-            issues
-          </li>
-          <li>
-            Developed a video-to-report tool using React with TanStack, FFmpeg
-            to scale and extract frames, and OpenAI GPT to identify students,
-            reducing teachers’ time spent per report by 75%
-          </li>
-          <li>
-            Automated customer migration across platforms by creating CRON jobs
-            in TypeScript to extract data from external sources, implementing
-            idempotent logic to ensure consistency across 20000+ records
-          </li>
-          <li>
-            Learnt Vue and Ruby on Rails from scratch within 2 weeks to launch a
-            WhatsApp broadcast feature for CRM app, enabling clients to
-            instantly launch marketing campaigns to 500+ customers
-          </li>
-        </ul>
-      ),
-    },
-    {
-      id: 3,
-      name: "Ola Chat",
-      role: "Software Engineer Intern",
-      yearStart: "Jul 2025",
-      yearEnd: "Present",
-      desc: (
-        <ul className="list-disc p-2">
-          <li>
-            Built a mobile-responsive static React page using Vite that
-            dynamically loads domain-specific assets across 3 domains,
-            streamlining deployment workflows and reducing configuration
-            complexity
-          </li>
-        </ul>
-      ),
-    },
-  ];
-
-  // const buttonStyle =
-  //   "py-2 rounded-lg text-white border-[1px] text-[0.875em] md:text-[1em] font-semibold hover:bg-white hover:text-black mb-3";
-
-  // const selectedButtonStyle =
-  //   "py-2 rounded-lg border-[1px] text-[0.875em] md:text-[1em] font-semibold bg-white text-black mb-3";
-
   return (
     <div
       className="py-20 max-w-screen-2xl flex justify-center flex-col"
@@ -170,6 +163,7 @@ export default function Experience() {
             </div>
           ))}
       </div>
+
       <div className="flex flex-col md:hidden">
         {experiences
           .sort((a, b) => b.id - a.id)
