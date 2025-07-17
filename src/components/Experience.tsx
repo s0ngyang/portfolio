@@ -130,23 +130,16 @@ export default function Experience() {
               <div className="hidden md:inline-flex bg-khaki-300 border-white border-[3px] flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0  items-center justify-center relative z-10" />
 
               <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border-[1px] md:border-2 rounded-xl bg-neutral-800/70 border-white">
-                <span className="flex items-center gap-1">
-                  <Text className="text-whip text-[1em] md:text-[1.25em] font-extrabold">
-                    {comp.role}
-                  </Text>
-                  <Text className="text-white text-sm md:text-base font-bold">
-                    @ {comp.name}
-                  </Text>
-                </span>
-                <Text className="text-white tracking-widest text-sm md:text-base font-semibold">
+                <Text className="text-slate-300 text-[1em] md:text-[1.25em] leading-6 font-bold">
+                  <span className="text-whip">{comp.role}</span>{" "}
+                  <span className="text-white">@</span> {comp.name}
+                </Text>
+                <Text className="text-white tracking-wider text-sm md:text-base font-semibold">
                   {comp.yearStart} - {comp.yearEnd}
                 </Text>
-
-                <div>
-                  <Text className="text-white text-sm md:text-base font-medium my-1">
-                    {comp.desc}
-                  </Text>
-                </div>
+                <Text className="text-white text-sm md:text-base font-medium my-1">
+                  {comp.desc}
+                </Text>
               </div>
             </div>
           ))}
