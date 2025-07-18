@@ -15,3 +15,22 @@ body {
   overscroll-behavior-y: none;
   overflow-x: auto;
 }
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: 0.85em;
+  margin-left: 1em;
+  margin-right: 1em;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 150ms;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  &:hover {
+    color: #bbab8c;
+  }
+}
