@@ -137,7 +137,7 @@ export default function Experience() {
                 <Text className="text-white tracking-wider text-sm md:text-base font-semibold">
                   {comp.yearStart} - {comp.yearEnd}
                 </Text>
-                <Text className="text-white text-sm md:text-base font-medium my-1">
+                <Text className="text-white text-sm md:text-base font-medium my-1 ml-1 md:ml-2">
                   {comp.desc}
                 </Text>
               </div>

@@ -64,7 +64,7 @@ export default function ContactSection() {
       className="flex w-full max-w-screen-2xl justify-center items-center min-h-screen"
       id="contact"
     >
-      <div className="grow p-12 grid lg:grid-cols-2 gap-4">
+      <div className="grow p-4 grid lg:grid-cols-2 gap-4">
         <div className="flex-1 justify-between align-between">
           <div className="flex flex-col text-center lg:text-left">
             <span className={textStyle}>THINK I’LL BE A GREAT </span>
@@ -106,7 +106,7 @@ export default function ContactSection() {
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div className="border-white border-[1px] md:border-2 rounded-2xl flex flex-col p-8 items-center bg-neutral-800/70">
+          <div className="border-white border-[1px] md:border-2 rounded-2xl flex flex-col p-6 lg:p-8 items-center bg-neutral-800/70">
             <div className="w-full flex flex-col gap-y-2">
               <p className={textStyle}>NAME</p>
               <TextInput
