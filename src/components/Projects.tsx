@@ -38,7 +38,7 @@ const projectObjs = [
 const Projects = () => {
   return (
     <div
-      className="flex flex-col px-2 md:px-2 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
+      className="flex flex-col pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
       id="projects"
     >
       <Heading
@@ -65,7 +65,7 @@ const Projects = () => {
               />
             </div>
 
-            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800/70 rounded-b-2xl">
+            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800/70 rounded-b-2xl md:rounded-r-2xl">
               <Text className="text-whip font-bold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (

@@ -61,10 +61,10 @@ export default function ContactSection() {
 
   return (
     <div
-      className="flex w-full max-w-screen-2xl justify-center items-center min-h-screen"
+      className="flex w-full pt-12 max-w-screen-2xl justify-center items-center md:min-h-screen"
       id="contact"
     >
-      <div className="grow p-4 grid lg:grid-cols-2 gap-4">
+      <div className="grow grid lg:grid-cols-2 gap-4">
         <div className="flex-1 justify-between align-between">
           <div className="flex flex-col text-center lg:text-left">
             <span className={textStyle}>THINK I’LL BE A GREAT </span>
