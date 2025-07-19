@@ -38,7 +38,7 @@ const projectObjs = [
 const Projects = () => {
   return (
     <div
-      className="flex flex-col px-2 md:px-12 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
+      className="flex flex-col px-2 md:px-2 pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
       id="projects"
     >
       <Heading
