@@ -7,16 +7,18 @@ const NavBar: React.FC = () => {
 
   useEffect(() => {
     if (!toggleNav) return;
-    function handleClickOutside(event: MouseEvent | TouchEvent) {
+    function handleClickOutside(event: Event) {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setToggleNav(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("touchstart", handleClickOutside);
+    window.addEventListener("scroll", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
+      window.removeEventListener("scroll", handleClickOutside);
     };
   }, [toggleNav]);
 
@@ -59,8 +61,8 @@ const NavBar: React.FC = () => {
           toggleNav ? "bg-black bg-opacity-30" : ""
         }`}
         style={{ marginTop: "env(safe-area-inset-top)" }}
-        ref={navRef}
         onClick={() => setToggleNav(!toggleNav)}
+        ref={navRef}
       >
         <svg
           className="w-5 h-5"
@@ -77,48 +79,47 @@ const NavBar: React.FC = () => {
             d="M1 1h15M1 7h15M1 13h15"
           />
         </svg>
+        {toggleNav && (
+          <div className="fixed top-16 right-5 flex flex-col border-[1px] border-white bg-black bg-opacity-80 rounded-xl text-left z-50">
+            <Link
+              href="#"
+              className={`nav-link p-2 pt-4 border-b-[0.5px] border-white active:text-khaki-500`}
+              onClick={() => setToggleNav(false)}
+            >
+              Home
+            </Link>
+            <Link
+              href="#experience"
+              className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+              onClick={() => setToggleNav(false)}
+            >
+              Experience
+            </Link>
+            <Link
+              href="#projects"
+              className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+              onClick={() => setToggleNav(false)}
+            >
+              Projects
+            </Link>
+            <Link
+              href="#contact"
+              className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+              onClick={() => setToggleNav(false)}
+            >
+              Contact
+            </Link>
+            <Link
+              href="/KeeSongYang_Resume.pdf"
+              target="_blank"
+              className={`nav-link p-2 pb-4 active:text-khaki-500`}
+              onClick={() => setToggleNav(false)}
+            >
+              Resume
+            </Link>
+          </div>
+        )}
       </button>
-
-      {toggleNav ? (
-        <div className="fixed top-16 right-5 flex flex-col border-[1px] border-white bg-black bg-opacity-80 rounded-xl z-50">
-          <Link
-            href="#"
-            className={`nav-link p-2 pt-4 border-b-[0.5px] border-white active:text-khaki-500`}
-            onClick={() => setToggleNav(false)}
-          >
-            Home
-          </Link>
-          <Link
-            href="#experience"
-            className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
-            onClick={() => setToggleNav(false)}
-          >
-            Experience
-          </Link>
-          <Link
-            href="#projects"
-            className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
-            onClick={() => setToggleNav(false)}
-          >
-            Projects
-          </Link>
-          <Link
-            href="#contact"
-            className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
-            onClick={() => setToggleNav(false)}
-          >
-            Contact
-          </Link>
-          <Link
-            href="/KeeSongYang_Resume.pdf"
-            target="_blank"
-            className={`nav-link p-2 pb-4 active:text-khaki-500`}
-            onClick={() => setToggleNav(false)}
-          >
-            Resume
-          </Link>
-        </div>
-      ) : null}
     </>
   );
 };
