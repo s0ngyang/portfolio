@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <>
       <ToastContainer />
-      <div className="flex items-center flex-col px-8 md:px-12 gap-y-8 sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl font-inter">
+      <div className="flex items-center flex-col px-8 md:px-12 mt-20 mb-10 md:my-0 gap-y-8 sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl font-inter ">
         <NavBar />
         <Hero currentText={currentText} />
         <Experience />

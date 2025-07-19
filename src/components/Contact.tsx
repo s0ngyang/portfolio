@@ -70,25 +70,25 @@ export default function ContactSection() {
             <span className={textStyle}>THINK I’LL BE A GREAT </span>
             <span className={textStyle}>ADDITION TO YOUR TEAM? </span>
             <Heading
-              className="text-latte-700 my-4 text-[2em] md:text-[3.25em] font-extrabold ml-[-5px]"
+              className="text-latte-700 my-4 text-[2em] md:text-[3.25em] font-extrabold"
               level="heading1"
               tag="h1"
             >
               Get in Touch.
             </Heading>
             <div className="flex flex-col items-center lg:items-start">
-              <hr className="w-[100%] lg:w-[75%] bg-white mb-5" />
-              <span className={`${textStyle} `}>FIND ME ON</span>
-              <div className="my-4 ml-[-5px]">
+              <hr className="w-full lg:w-3/4 bg-white mb-5" />
+              <span className={textStyle}>FIND ME ON</span>
+              <div className="my-4 gap-4 flex">
                 <a
-                  className={`${textStyle} transition-all transform ease-linear border-[1px] px-4 py-2 rounded-lg mr-3 hover:bg-white hover:text-black`}
+                  className={`${textStyle} transition-all transform ease-linear border-[1px] px-4 py-2 rounded-lg bg-black bg-opacity-70 hover:bg-white hover:text-black active:bg-white active:text-black`}
                   href="https://github.com/s0ngyang"
                   target="_blank"
                 >
                   GITHUB
                 </a>
                 <a
-                  className={`${textStyle} transition-all transform ease-linear border-[1px] px-4 py-2 rounded-lg hover:bg-white hover:text-black`}
+                  className={`${textStyle} transition-all transform ease-linear border-[1px] px-4 py-2 rounded-lg bg-black bg-opacity-70 hover:bg-white hover:text-black active:bg-white active:text-black`}
                   href="https://www.linkedin.com/in/keesongyang"
                   target="_blank"
                 >
@@ -139,7 +139,7 @@ export default function ContactSection() {
           <div className="mt-4 flex justify-center">
             <button
               type="submit"
-              className={`${textStyle} border-[1px] px-4 py-2 rounded-lg mr-3 ${
+              className={`${textStyle} border-[1px] px-4 py-2 rounded-lg ${
                 loading || !areFieldsFilled(name, email, message)
                   ? "opacity-20 cursor-not-allowed"
                   : "hover:bg-white hover:text-black transition-all transform ease-linear"

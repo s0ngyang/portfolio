@@ -10,7 +10,7 @@ type HeroProps = {
 const Hero: React.FC<HeroProps> = ({ currentText }) => {
   return (
     <div
-      className="flex flex-col w-full items-center justify-center text-center md:min-h-screen mt-20 md:mt-0"
+      className="flex flex-col w-full items-center justify-center text-center md:min-h-screen"
       id="hero"
     >
       <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6">

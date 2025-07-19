@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 
 const NavBar: React.FC = () => {
   const [toggleNav, setToggleNav] = useState(false);
-  const navRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!toggleNav) return;
@@ -20,8 +20,17 @@ const NavBar: React.FC = () => {
     };
   }, [toggleNav]);
 
+  useEffect(() => {
+    const handleResize = () => setToggleNav(false);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
+      {/* Desktop Navbar */}
       <div className="fixed top-5 bg-black bg-opacity-70 px-6 py-2 rounded-3xl hidden md:block z-50">
         <a href="#hero" className="nav-link">
           Home
@@ -44,69 +53,72 @@ const NavBar: React.FC = () => {
         </Link>
       </div>
 
-      <div
-        className="fixed top-5 right-0 px-6 py-2 rounded-3xl block md:hidden z-50"
-        style={{ paddingTop: "env(safe-area-inset-top)" }}
+      {/* Mobile Navbar */}
+      <button
+        className={`block md:hidden fixed top-5 right-5 p-2 rounded-lg z-50 ${
+          toggleNav ? "bg-black bg-opacity-30" : ""
+        }`}
+        style={{ marginTop: "env(safe-area-inset-top)" }}
         ref={navRef}
+        onClick={() => setToggleNav(!toggleNav)}
       >
-        <button onClick={() => setToggleNav(!toggleNav)}>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 17 14"
+        <svg
+          className="w-5 h-5"
+          aria-hidden="true"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke={toggleNav ? "#ded0b6" : "#FFFFFF"}
+            className="hover:fill-latte"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+
+      {toggleNav ? (
+        <div className="fixed top-16 right-5 flex flex-col border-[1px] border-white bg-black bg-opacity-80 rounded-xl z-50">
+          <Link
+            href="#"
+            className={`nav-link p-2 pt-4 border-b-[0.5px] border-white active:text-khaki-500`}
+            onClick={() => setToggleNav(false)}
           >
-            <path
-              stroke={toggleNav ? "#ded0b6" : "#FFFFFF"}
-              className="hover:fill-latte"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        {toggleNav ? (
-          <div className="fixed top-15 right-3 flex flex-col bg-black bg-opacity-80 border-[1px] border-white rounded-xl -ml-1 mt-1">
-            <Link
-              href="#"
-              className={`nav-link p-2 pt-4 border-b-[0.5px] border-white`}
-              onClick={() => setToggleNav(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="#experience"
-              className={`nav-link p-2 border-b-[0.5px] border-white`}
-              onClick={() => setToggleNav(false)}
-            >
-              Experience
-            </Link>
-            <Link
-              href="#projects"
-              className={`nav-link p-2 border-b-[0.5px] border-white`}
-              onClick={() => setToggleNav(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              className={`nav-link p-2 border-b-[0.5px] border-white`}
-              onClick={() => setToggleNav(false)}
-            >
-              Contact
-            </Link>
-            <Link
-              href="/KeeSongYang_Resume.pdf"
-              target="_blank"
-              className={`nav-link p-2 pb-4`}
-              onClick={() => setToggleNav(false)}
-            >
-              Resume
-            </Link>
-          </div>
-        ) : null}
-      </div>
+            Home
+          </Link>
+          <Link
+            href="#experience"
+            className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+            onClick={() => setToggleNav(false)}
+          >
+            Experience
+          </Link>
+          <Link
+            href="#projects"
+            className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+            onClick={() => setToggleNav(false)}
+          >
+            Projects
+          </Link>
+          <Link
+            href="#contact"
+            className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+            onClick={() => setToggleNav(false)}
+          >
+            Contact
+          </Link>
+          <Link
+            href="/KeeSongYang_Resume.pdf"
+            target="_blank"
+            className={`nav-link p-2 pb-4 active:text-khaki-500`}
+            onClick={() => setToggleNav(false)}
+          >
+            Resume
+          </Link>
+        </div>
+      ) : null}
     </>
   );
 };
