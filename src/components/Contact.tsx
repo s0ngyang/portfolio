@@ -12,7 +12,7 @@ export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false); // Added loading state
+  const [isLoading, setIsLoading] = useState(false); // Added loading state
 
   function areFieldsFilled(
     name: string,
@@ -25,12 +25,7 @@ export default function ContactSection() {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
 
-    if (!areFieldsFilled(name, email, message)) {
-      // toast.error("Please fill in all fields!");
-      return;
-    }
-
-    setLoading(true); // Disable the button
+    setIsLoading(true); // Disable the button
 
     const myForm = event.target as HTMLFormElement;
     const formData = new FormData(myForm);
@@ -56,8 +51,10 @@ export default function ContactSection() {
       .catch((error) =>
         toast.error("Failed to send message. Please try again later.")
       )
-      .finally(() => setLoading(false)); // Re-enable the button
+      .finally(() => setIsLoading(false)); // Re-enable the button
   };
+
+  const isSubmitDisabled = isLoading || !areFieldsFilled(name, email, message);
 
   return (
     <div
@@ -139,13 +136,14 @@ export default function ContactSection() {
           <div className="mt-4 flex justify-center">
             <button
               type="submit"
+              disabled={isSubmitDisabled}
               className={`${textStyle} border-[1px] px-4 py-2 rounded-lg ${
-                loading || !areFieldsFilled(name, email, message)
+                isSubmitDisabled
                   ? "opacity-20 cursor-not-allowed"
                   : "hover:bg-white hover:text-black transition-all transform ease-linear"
               }`}
             >
-              {loading ? "SENDING..." : "SEND MESSAGE"}
+              {isLoading ? "SENDING..." : "SEND MESSAGE"}
             </button>
           </div>
         </form>
