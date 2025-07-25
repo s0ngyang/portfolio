@@ -26,7 +26,7 @@ export default function ContactSection() {
     event.preventDefault();
 
     if (!areFieldsFilled(name, email, message)) {
-      toast.error("Please fill in all fields!");
+      // toast.error("Please fill in all fields!");
       return;
     }
 
