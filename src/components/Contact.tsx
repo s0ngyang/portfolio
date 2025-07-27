@@ -3,36 +3,32 @@ import TextArea from "../artisan/TextArea";
 import TextInput from "../artisan/TextInput";
 import Heading from "../artisan/Heading";
 import { toast } from "react-toastify";
+import { useForm, SubmitHandler } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 
 const textStyle =
   "text-white text-[0.75em] font-semibold tracking-[0.45em] lg:text-[0.875em]";
 
+type Inputs = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 export default function ContactSection() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Added loading state
+  const [isLoading, setIsLoading] = useState(false);
+  const {
+    register: contactForm,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
 
-  function areFieldsFilled(
-    name: string,
-    email: string,
-    message: string
-  ): boolean {
-    return [name, email, message].every((field) => field.trim().length > 0);
-  }
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    if (isLoading) return;
+    setIsLoading(true);
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
-    event.preventDefault();
-
-    setIsLoading(true); // Disable the button
-
-    const myForm = event.target as HTMLFormElement;
-    const formData = new FormData(myForm);
-
-    // Convert FormData to URLSearchParams
     const formParams = new URLSearchParams();
-    formData.forEach((value, key) => {
+    Object.entries(data).forEach(([key, value]) => {
       formParams.append(key, value.toString());
     });
 
@@ -42,19 +38,15 @@ export default function ContactSection() {
       body: formParams.toString(),
     })
       .then(() => {
-        myForm.reset();
-        setName(""); // Reset the state
-        setEmail(""); // Reset the state
-        setMessage(""); // Reset the state
         toast.success("Message sent! I'll be in contact with you soon.");
       })
       .catch((error) =>
         toast.error("Failed to send message. Please try again later.")
       )
-      .finally(() => setIsLoading(false)); // Re-enable the button
+      .finally(() => setIsLoading(false));
   };
 
-  const isSubmitDisabled = isLoading || !areFieldsFilled(name, email, message);
+  const isSubmitDisabled = isLoading;
 
   return (
     <div
@@ -100,7 +92,7 @@ export default function ContactSection() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="border-white border-[1px] md:border-2 rounded-2xl flex flex-col p-6 lg:p-8 items-center bg-neutral-800/70">
@@ -109,26 +101,23 @@ export default function ContactSection() {
               <TextInput
                 label=""
                 type="text"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                {...contactForm("name", { required: true })}
                 className="bg-white/20 w-full p-3 text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
               <p className={textStyle}>EMAIL</p>
               <TextInput
                 label=""
                 type="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                {...contactForm("email", {
+                  required: true,
+                  pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                })}
                 className="bg-white/20 p-3 w-full text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
               <p className={textStyle}>YOUR MESSAGE</p>
               <TextArea
                 label=""
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                {...contactForm("message", { required: true })}
                 className="bg-white/20 p-3 w-full text-white min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
             </div>
