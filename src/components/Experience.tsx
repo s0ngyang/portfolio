@@ -147,7 +147,7 @@ export default function Experience() {
               </div>
               <div className="hidden md:inline-flex bg-khaki-300 border-white border-[3px] flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0  items-center justify-center relative z-10" />
 
-              <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border-[1px] md:border-2 rounded-xl bg-neutral-800/70 border-white">
+              <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border-[1px] md:border-2 rounded-xl bg-neutral-800 opacity-90 border-white">
                 <Text className="text-slate-300 text-[1em] md:text-[1.25em] leading-6 font-bold">
                   <span className="text-whip">{comp.role}</span>{" "}
                   <span className="text-white">@</span> {comp.name}

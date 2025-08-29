@@ -54,7 +54,7 @@ const Projects = () => {
             key={proj.name}
             className="max-w-screen-lg border-white border-[1px] md:border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200"
           >
-            <div className="w-full md:w-1/3 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
+            <div className="w-full md:w-1/3 min-h-64 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
               <Image
                 className="object-cover h-full"
                 src={proj.thumb.src}
@@ -64,7 +64,7 @@ const Projects = () => {
               />
             </div>
 
-            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800/70 rounded-b-2xl md:rounded-r-2xl">
+            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800 opacity-90 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
               <Text className="text-whip font-bold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (
