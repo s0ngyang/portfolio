@@ -22,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preload" as="image" href="/background.webp" />
+        <link rel="preload" as="image" href="/profile.webp" />
       </head>
       <body className={`${inter.className} justify-center flex`}>
         {children}

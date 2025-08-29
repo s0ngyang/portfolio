@@ -1,7 +1,6 @@
 import Heading from "../artisan/Heading";
 import Text from "../artisan/Text";
 import Image from "next/image";
-import profilePhoto from "../assets/profile.webp";
 
 type HeroProps = {
   currentText: string;
@@ -15,11 +14,12 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
     >
       <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6">
         <Image
-          src={profilePhoto.src}
+          src="/profile.webp"
           width={300}
           height={300}
           alt="Profile Photo"
           loading="eager"
+          priority
         />
       </div>
 
