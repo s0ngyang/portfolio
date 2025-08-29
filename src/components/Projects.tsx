@@ -8,9 +8,8 @@ const projectObjs = [
   {
     name: "TypeDash V2",
     desc: [
-      "Revamping a real-time type racing web app with single and multiplayer modes, adding typing statistics tracking to enhance user engagement and performance insights",
+      "Developed a real-time type-racing game using React and WebSockets (migrated from Socket.IO), leveraging Redis for centralised game state management and Redis Pub/Sub to broadcast typing progress to users within multiplayer rooms",
       "Migrating backend from Express.js to Golang for better concurrency support; implementing a Redis-powered leaderboard system for real-time ranking updates",
-      "Built with React and WebSockets using Socket.IO to broadcast live typing progress to users in real time",
     ],
     thumb: {
       src: typedashImage,
@@ -23,7 +22,7 @@ const projectObjs = [
   {
     name: "Exportifellas",
     desc: [
-      "Built a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall, streamlining the song voting process for all future performances",
+      "Ideated a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall to streamline song voting process for all performances",
     ],
     thumb: {
       src: exportifellasImage,

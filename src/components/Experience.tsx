@@ -58,24 +58,31 @@ const experiences = [
     desc: (
       <ul className="list-disc p-2">
         <li>
-          Led the launch of an AI curriculum planner adopted by 200 users across
-          28 preschool branches by running weekly customer meetings, live demos,
-          and continuous feedback loops; resolved production issues
+          Spearheaded end-to-end design of AI curriculum planner adopted across
+          28 preschool branches, showcasing attention to detail by iteratively
+          refining features through weekly stakeholder reviews, live demos, and
+          continuous feedback loops
+        </li>
+        <li>
+          Automated data migration across platforms by building an ETL-style
+          pipeline using Graphile Worker cron jobs to extract data from external
+          sources, transform WhatsApp message data and load into PostgreSQL,
+          ensuring idempotency across 20000+ records
+        </li>
+        <li>
+          Resolved a Supabase Auth production bug affecting Outlook users by
+          analysing server logs and identifying email prefetching behaviour that
+          caused magic links to expire
         </li>
         <li>
           Developed a video-to-report tool using React with TanStack, FFmpeg to
-          scale and extract frames, and OpenAI GPT to identify students,
-          reducing teachers’ time spent per report by 75%
-        </li>
-        <li>
-          Automated customer migration across platforms by creating CRON jobs in
-          TypeScript to extract data from external sources, implementing
-          idempotent logic to ensure consistency across 20000+ records
+          scale and extract frames, and OpenAI GPT tool calls to identify
+          students, reducing teachers’ time spent per report by 75%
         </li>
         <li>
           Learnt Vue and Ruby on Rails from scratch within 2 weeks to launch a
-          WhatsApp broadcast feature for CRM app, enabling clients to instantly
-          launch marketing campaigns to 500+ customers
+          broadcast feature with metrics tracking leveraging WhatsApp Cloud API
+          to send messages to 500+ customers per campaign
         </li>
       </ul>
     ),
@@ -89,10 +96,21 @@ const experiences = [
     desc: (
       <ul className="list-disc p-2">
         <li>
-          Built a mobile-responsive static React page using Vite that
-          dynamically loads domain-specific assets across 3 domains,
-          streamlining deployment workflows and reducing configuration
-          complexity
+          Engineered React mini-games with WebView, ensuring UI consistency
+          through meticulous design reviews and performance optimizations,
+          including lazy loading and TanStack Query caching, resulting in higher
+          user engagement
+        </li>
+        <li>
+          Migrated CI/CD to a modular two-step flow by creating reusable GitHub
+          workflows for artifact builds and Aliyun Flow for deployments, cutting
+          server load and improving maintainability and separation of concerns
+        </li>
+        <li>
+          Optimized deployment process by analyzing complexity vs. downtime
+          tradeoffs; selected a remove-and-replace method over symlink-based
+          deployment, ensuring maintainability while keeping downtime
+          insignificant ({"<0.2s"})
         </li>
       </ul>
     ),
