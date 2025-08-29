@@ -33,7 +33,7 @@ const NavBar: React.FC = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="fixed top-5 bg-black bg-opacity-70 px-6 py-2 rounded-3xl hidden md:block z-50">
+      <div className="fixed top-5 bg-black bg-opacity-80 px-6 py-2 rounded-3xl hidden md:block z-50">
         <a href="#hero" className="nav-link">
           Home
         </a>
