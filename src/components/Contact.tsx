@@ -17,13 +17,7 @@ type Inputs = {
 
 export default function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
-  const {
-    register: contactForm,
-    handleSubmit,
-    formState: {
-      errors: {},
-    },
-  } = useForm<Inputs>();
+  const { register: contactForm, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     if (isLoading) return;

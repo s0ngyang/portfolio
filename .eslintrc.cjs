@@ -5,7 +5,7 @@ module.exports = {
     es2020: true,
     node: true,
   },
-  extends: ["eslint:recommended"],
+  extends: ["eslint:recommended", "@typescript-eslint/recommended"],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -21,8 +21,8 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
-    "no-unused-vars": "off",
-    "no-undef": "off",
-    "no-empty-pattern": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-empty-pattern": "warn",
   },
 };
