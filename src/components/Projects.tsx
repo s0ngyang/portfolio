@@ -1,3 +1,6 @@
+import typedashImage from "/src/assets/typedash.webp";
+import exportifellasImage from "/src/assets/exportifellas.webp";
+
 const projectObjs = [
   {
     name: "TypeDash V2",
@@ -6,7 +9,7 @@ const projectObjs = [
       "Migrating backend from Express.js to Golang for better concurrency support; implementing a Redis-powered leaderboard system for real-time ranking updates",
     ],
     thumb: {
-      src: "/src/assets/typedash.webp",
+      src: typedashImage,
       width: 1530,
       height: 1500,
     },
@@ -19,7 +22,7 @@ const projectObjs = [
       "Ideated a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall to streamline song voting process for all performances",
     ],
     thumb: {
-      src: "/src/assets/exportifellas.webp",
+      src: exportifellasImage,
       width: 3024,
       height: 1714,
     },
@@ -51,6 +54,7 @@ const Projects = () => {
                 width={proj.thumb.width}
                 height={proj.thumb.height}
                 alt={proj.name}
+                loading="lazy"
               />
             </div>
 
