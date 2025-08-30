@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
       className="flex flex-col w-full items-center justify-center text-center md:min-h-screen"
       id="hero"
     >
-      <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6">
+      <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6 pointer-events-none select-none">
         <Image
           src="/profile.webp"
           width={300}

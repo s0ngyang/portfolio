@@ -21,7 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preload" as="image" href="/background.webp" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="preload" as="image" href="/profile.webp" />
       </head>
       <body className={`${inter.className} justify-center flex`}>
