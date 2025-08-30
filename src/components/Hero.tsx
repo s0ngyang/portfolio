@@ -1,6 +1,3 @@
-import Heading from "../artisan/Heading";
-import Text from "../artisan/Text";
-
 interface HeroProps {
   currentText: string;
 }
@@ -21,27 +18,23 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
         />
       </div>
 
-      <Text className="text-white tracking-widest text-[0.875em] md:text-[1em] font-semibold mb-[-10px]">
+      <p className="text-white tracking-wide text-[0.875em] md:text-[1em] font-semibold">
         Hi, my name is
-      </Text>
+      </p>
 
-      <Heading
-        className="text-latte my-4 text-[2em] md:text-[3.5em] font-extrabold overflow-hidden"
-        level="heading1"
-        tag="h1"
-      >
+      <h1 className="text-latte my-4 text-[2em] md:text-[3.5em] leading-tight font-extrabold overflow-hidden">
         Song Yang
-      </Heading>
+      </h1>
 
       <hr className="bg-white w-52 lg:w-80" />
-      <div className=" px-8 py-2 mt-5 min-w-[80px] min-h-[40px] flex justify-center items-center">
+      <div className=" px-8 py-2 mt-4 min-w-[80px] min-h-[40px] flex justify-center items-center">
         <div className="overflow-hidden border-r-[.15em]">
-          <Text
-            className="text-white tracking-[0.2em] max-md:text-[0.875em] font-semibold"
+          <p
+            className="text-white tracking-wider max-md:text-[0.875em] font-semibold"
             id="typing-container"
           >
             {currentText}
-          </Text>
+          </p>
         </div>
       </div>
     </div>

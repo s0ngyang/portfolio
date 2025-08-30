@@ -1,13 +1,10 @@
 import { useState } from "react";
-import TextArea from "../artisan/TextArea";
-import TextInput from "../artisan/TextInput";
-import Heading from "../artisan/Heading";
 import { toast } from "react-toastify";
 import { useForm, SubmitHandler } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 
 const textStyle =
-  "text-white text-[0.75em] font-semibold tracking-[0.45em] lg:text-[0.875em]";
+  "text-white text-[0.75em] font-semibold tracking-[0.2em] lg:text-[0.875em]";
 
 type Inputs = {
   name: string;
@@ -17,7 +14,7 @@ type Inputs = {
 
 export default function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
-  const { register: contactForm, handleSubmit } = useForm<Inputs>();
+  const { register: contactForm, handleSubmit, reset } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     if (isLoading) return;
@@ -35,6 +32,7 @@ export default function ContactSection() {
     })
       .then(() => {
         toast.success("Message sent! I'll be in contact with you soon.");
+        reset();
       })
       .catch(() =>
         toast.error("Failed to send message. Please try again later.")
@@ -46,7 +44,7 @@ export default function ContactSection() {
 
   return (
     <div
-      className="flex w-full pt-12 max-w-screen-2xl justify-center items-center md:min-h-screen"
+      className="flex w-full pt-12 lg:px-8 max-w-screen-2xl justify-center items-center md:min-h-screen"
       id="contact"
     >
       <div className="grow grid lg:grid-cols-2 gap-4">
@@ -54,13 +52,9 @@ export default function ContactSection() {
           <div className="flex flex-col text-center lg:text-left">
             <span className={textStyle}>THINK I’LL BE A GREAT </span>
             <span className={textStyle}>ADDITION TO YOUR TEAM? </span>
-            <Heading
-              className="text-latte-700 my-4 text-[2em] md:text-[3.25em] font-extrabold"
-              level="heading1"
-              tag="h1"
-            >
+            <h1 className="text-latte-700 my-4 text-[2em] md:text-[3.25em] font-extrabold">
               Get in Touch.
-            </Heading>
+            </h1>
             <div className="flex flex-col items-center lg:items-start">
               <hr className="w-full lg:w-3/4 bg-white mb-5" />
               <span className={textStyle}>FIND ME ON</span>
@@ -94,25 +88,22 @@ export default function ContactSection() {
           <div className="border-white border-[1px] md:border-2 rounded-2xl flex flex-col p-6 lg:p-8 items-center bg-neutral-800/70">
             <div className="w-full flex flex-col gap-y-2">
               <p className={textStyle}>NAME</p>
-              <TextInput
-                label=""
+              <input
                 type="text"
                 {...contactForm("name", { required: true })}
                 className="bg-white/20 w-full p-3 text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
               <p className={textStyle}>EMAIL</p>
-              <TextInput
-                label=""
+              <input
                 type="email"
                 {...contactForm("email", {
                   required: true,
                   pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                 })}
-                className="bg-white/20 p-3 w-full text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
+                className="bg-white/20 w-full p-3 text-white focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />
               <p className={textStyle}>YOUR MESSAGE</p>
-              <TextArea
-                label=""
+              <textarea
                 {...contactForm("message", { required: true })}
                 className="bg-white/20 p-3 w-full text-white min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-latte-400 focus:outline-none"
               />

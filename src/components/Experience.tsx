@@ -1,6 +1,3 @@
-import Heading from "../artisan/Heading";
-import Text from "../artisan/Text";
-
 const experiences = [
   {
     id: 0,
@@ -123,16 +120,12 @@ export default function Experience() {
       className="pt-20 max-w-screen-2xl flex justify-center flex-col"
       id="experience"
     >
-      <Text className="text-white tracking-[0.35em] text-[0.875em] md:text-[1em] font-semibold mb-[-10px] text-center">
+      <p className="text-white text-center text-[0.875em] md:text-[1em] font-semibold leading-tight tracking-[0.35em]">
         EXPERIENCE
-      </Text>
-      <Heading
-        className="text-latte-700 my-4 text-[2em] md:text-[3.5em] font-extrabold text-center"
-        level="heading1"
-        tag="h1"
-      >
+      </p>
+      <h1 className="text-latte-700 my-4 text-[2em] md:text-[3.5em] font-extrabold text-center leading-tight">
         I have worked at...
-      </Heading>
+      </h1>
 
       <div className="md:flex flex-wrap max-w-screen-lg">
         {experiences
@@ -148,16 +141,16 @@ export default function Experience() {
               <div className="hidden md:inline-flex bg-khaki-300 border-white border-[3px] flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0  items-center justify-center relative z-10" />
 
               <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border-[1px] md:border-2 rounded-xl bg-neutral-800 opacity-90 border-white">
-                <Text className="text-slate-300 text-[1em] md:text-[1.25em] leading-6 font-bold">
+                <p className="text-slate-300 text-[1em] md:text-[1.25em] leading-6 font-semibold">
                   <span className="text-whip">{comp.role}</span>{" "}
                   <span className="text-white">@</span> {comp.name}
-                </Text>
-                <Text className="text-white tracking-wider text-sm md:text-base font-semibold">
+                </p>
+                <p className="text-white text-sm md:text-base font-semibold">
                   {comp.yearStart} - {comp.yearEnd}
-                </Text>
-                <Text className="text-white text-sm md:text-base font-medium my-1 ml-1 md:ml-2">
+                </p>
+                <p className="text-white text-sm md:text-base font-normal my-1 ml-1 md:ml-2">
                   {comp.desc}
-                </Text>
+                </p>
               </div>
             </div>
           ))}

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Experience from "./components/Experience";
-import Hero from "./components/Hero";
-import NavBar from "./components/NavBar";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Experience from "/src/components/Experience";
+import Hero from "/src/components/Hero";
+import NavBar from "/src/components/NavBar";
+import Projects from "/src/components/Projects";
+import Contact from "/src/components/Contact";
 import { ToastContainer } from "react-toastify";
 
 const text = ["Software Engineer", "Final Year Computer Science Student"];

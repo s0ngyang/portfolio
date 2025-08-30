@@ -1,8 +1,3 @@
-import Heading from "../artisan/Heading";
-import Text from "../artisan/Text";
-const typedashImage = "/typedash.webp";
-const exportifellasImage = "/exportifellas.webp";
-
 const projectObjs = [
   {
     name: "TypeDash V2",
@@ -11,7 +6,7 @@ const projectObjs = [
       "Migrating backend from Express.js to Golang for better concurrency support; implementing a Redis-powered leaderboard system for real-time ranking updates",
     ],
     thumb: {
-      src: typedashImage,
+      src: "/src/assets/typedash.webp",
       width: 1530,
       height: 1500,
     },
@@ -24,7 +19,7 @@ const projectObjs = [
       "Ideated a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall to streamline song voting process for all performances",
     ],
     thumb: {
-      src: exportifellasImage,
+      src: "/src/assets/exportifellas.webp",
       width: 3024,
       height: 1714,
     },
@@ -39,13 +34,9 @@ const Projects = () => {
       className="flex flex-col pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
       id="projects"
     >
-      <Heading
-        className="text-latte-700 my-4 text-[2em] md:text-[3.5em] text-2xl font-extrabold"
-        level="heading1"
-        tag="h1"
-      >
+      <h1 className="text-latte-700 my-4 text-[2em] md:text-[3.5em] text-2xl font-extrabold">
         Projects
-      </Heading>
+      </h1>
 
       <div className="grid grid-cols-1 mt-10 gap-10 w-full">
         {projectObjs.map((proj) => (
@@ -64,7 +55,7 @@ const Projects = () => {
             </div>
 
             <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800 opacity-90 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
-              <Text className="text-whip font-bold text-lg md:text-xl lg:text-2xl">
+              <p className="text-whip font-semibold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (
                   <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-blue-700 hover:underline">
@@ -88,7 +79,7 @@ const Projects = () => {
                     </a>
                   </span>
                 )}
-              </Text>
+              </p>
               <ul className="list-disc text-white mt-2 text-sm md:text-base ml-5">
                 {proj.desc.map((point, index) => (
                   <li key={index}>{point}</li>
