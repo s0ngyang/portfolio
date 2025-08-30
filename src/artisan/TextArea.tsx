@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ChangeEvent, ForwardedRef, TextareaHTMLAttributes } from "react";
+import type { ForwardedRef, TextareaHTMLAttributes } from "react";
 import React, { forwardRef, useId } from "react";
 
 export type TextAreaSize = "lg" | "md" | "sm";
@@ -49,12 +49,6 @@ const fontSizeClasses: Record<TextAreaSize, string> = {
   lg: "text-base",
   md: "text-sm",
   sm: "text-xs",
-};
-
-const iconSizeClasses: Record<TextAreaSize, string> = {
-  lg: "h-4 w-4",
-  md: "h-4 w-4",
-  sm: "h-4 w-4",
 };
 
 function paddingClass(size: TextAreaSize): string {

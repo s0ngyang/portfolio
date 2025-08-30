@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +11,7 @@ html {
 body {
   background-color: #1a1a1a;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url(../assets/background.webp);
+    url(/background.webp);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

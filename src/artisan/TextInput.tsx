@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ChangeEvent, ForwardedRef, InputHTMLAttributes } from "react";
+import type { ForwardedRef, InputHTMLAttributes } from "react";
 import React, { forwardRef, useId } from "react";
 
 export type TextInputSize = "lg" | "md" | "sm";

@@ -1,4 +1,4 @@
-import React, { useState, FormEventHandler } from "react";
+import { useState } from "react";
 import TextArea from "../artisan/TextArea";
 import TextInput from "../artisan/TextInput";
 import Heading from "../artisan/Heading";
@@ -20,7 +20,9 @@ export default function ContactSection() {
   const {
     register: contactForm,
     handleSubmit,
-    formState: { errors },
+    formState: {
+      errors: {},
+    },
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
@@ -40,7 +42,7 @@ export default function ContactSection() {
       .then(() => {
         toast.success("Message sent! I'll be in contact with you soon.");
       })
-      .catch((error) =>
+      .catch(() =>
         toast.error("Failed to send message. Please try again later.")
       )
       .finally(() => setIsLoading(false));

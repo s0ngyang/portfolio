@@ -1,10 +1,9 @@
 import Heading from "../artisan/Heading";
 import Text from "../artisan/Text";
-import Image from "next/image";
 
-type HeroProps = {
+interface HeroProps {
   currentText: string;
-};
+}
 
 const Hero: React.FC<HeroProps> = ({ currentText }) => {
   return (
@@ -13,13 +12,12 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
       id="hero"
     >
       <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6 pointer-events-none select-none">
-        <Image
+        <img
           src="/profile.webp"
           width={300}
           height={300}
           alt="Profile Photo"
           loading="eager"
-          priority
         />
       </div>
 

@@ -1,8 +1,7 @@
 import Heading from "../artisan/Heading";
 import Text from "../artisan/Text";
-import Image from "next/image";
-import typedashImage from "../assets/typedash.webp";
-import exportifellasImage from "../assets/exportifellas.webp";
+const typedashImage = "/typedash.webp";
+const exportifellasImage = "/exportifellas.webp";
 
 const projectObjs = [
   {
@@ -55,7 +54,7 @@ const Projects = () => {
             className="max-w-screen-lg border-white border-[1px] md:border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200"
           >
             <div className="w-full md:w-1/3 min-h-64 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
-              <Image
+              <img
                 className="object-cover h-full"
                 src={proj.thumb.src}
                 width={proj.thumb.width}

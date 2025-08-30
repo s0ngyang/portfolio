@@ -1,16 +1,14 @@
-"use client";
-
 import { useEffect, useState } from "react";
-import Experience from "../components/Experience";
-import Hero from "../components/Hero";
-import NavBar from "../components/NavBar";
-import Projects from "../components/Projects";
-import Contact from "../components/Contact";
+import Experience from "./components/Experience";
+import Hero from "./components/Hero";
+import NavBar from "./components/NavBar";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
 
 const text = ["Software Engineer", "Final Year Computer Science Student"];
 
-export default function Home() {
+export default function App() {
   const [currWordIndex, setCurrWordIndex] = useState(0);
   const [currTextIndex, setCurrTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -44,7 +42,7 @@ export default function Home() {
   return (
     <>
       <ToastContainer />
-      <div className="flex items-center flex-col px-8 md:px-12 mt-20 mb-10 md:my-0 gap-y-8 sm:min-h-[360px] md:min-h-[720px] max-w-screen-2xl font-inter ">
+      <div className="flex items-center flex-col px-8 md:px-12 mt-20 mb-10 md:my-0 gap-y-8 sm:min-h-[360px] md:min-h-[720px] font-inter ">
         <NavBar />
         <Hero currentText={currentText} />
         <Experience />

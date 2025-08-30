@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const navRef = useRef<HTMLButtonElement>(null);
 
@@ -37,22 +36,18 @@ const NavBar: React.FC = () => {
         <a href="#hero" className="nav-link">
           Home
         </a>
-        <Link href="#experience" className="nav-link">
+        <a href="#experience" className="nav-link">
           Experience
-        </Link>
-        <Link href="#projects" className="nav-link">
+        </a>
+        <a href="#projects" className="nav-link">
           Projects
-        </Link>
-        <Link href="#contact" className="nav-link">
+        </a>
+        <a href="#contact" className="nav-link">
           Contact
-        </Link>
-        <Link
-          href="/keesongyang_resume.pdf"
-          target="_blank"
-          className="nav-link"
-        >
+        </a>
+        <a href="/KeeSongYang_Resume.pdf" target="_blank" className="nav-link">
           Resume
-        </Link>
+        </a>
       </div>
 
       {/* Mobile Navbar */}
@@ -81,42 +76,42 @@ const NavBar: React.FC = () => {
         </svg>
         {toggleNav && (
           <div className="fixed top-16 right-5 flex flex-col border-[1px] border-white bg-black bg-opacity-80 rounded-xl text-left z-50">
-            <Link
+            <a
               href="#"
               className={`nav-link p-2 pt-4 border-b-[0.5px] border-white active:text-khaki-500`}
               onClick={() => setToggleNav(false)}
             >
               Home
-            </Link>
-            <Link
+            </a>
+            <a
               href="#experience"
               className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
               onClick={() => setToggleNav(false)}
             >
               Experience
-            </Link>
-            <Link
+            </a>
+            <a
               href="#projects"
               className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
               onClick={() => setToggleNav(false)}
             >
               Projects
-            </Link>
-            <Link
+            </a>
+            <a
               href="#contact"
               className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
               onClick={() => setToggleNav(false)}
             >
               Contact
-            </Link>
-            <Link
+            </a>
+            <a
               href="/KeeSongYang_Resume.pdf"
               target="_blank"
               className={`nav-link p-2 pb-4 active:text-khaki-500`}
               onClick={() => setToggleNav(false)}
             >
               Resume
-            </Link>
+            </a>
           </div>
         )}
       </button>
