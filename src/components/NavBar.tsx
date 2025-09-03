@@ -32,7 +32,7 @@ const NavBar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="fixed top-5 bg-black bg-opacity-80 px-6 py-2 rounded-3xl hidden md:block z-50">
+      <div className="fixed top-5 bg-slate-800/80 backdrop-blur-md border border-slate-700/50 px-6 py-3 rounded-2xl hidden md:block z-50 shadow-2xl shadow-slate-900/50">
         <a href="#hero" className="nav-link">
           Home
         </a>
@@ -52,8 +52,10 @@ const NavBar = () => {
 
       {/* Mobile Navbar */}
       <button
-        className={`block md:hidden fixed top-5 right-5 p-2 rounded-lg z-50 ${
-          toggleNav ? "bg-black bg-opacity-30" : ""
+        className={`block md:hidden fixed top-5 right-5 p-3 rounded-xl z-50 transition-all duration-300 ${
+          toggleNav
+            ? "bg-slate-800/90 backdrop-blur-md border border-slate-700/50 shadow-lg"
+            : "bg-slate-800/60 backdrop-blur-sm hover:bg-slate-800/80"
         }`}
         style={{ marginTop: "env(safe-area-inset-top)" }}
         onClick={() => setToggleNav(!toggleNav)}
@@ -66,8 +68,8 @@ const NavBar = () => {
           viewBox="0 0 17 14"
         >
           <path
-            stroke={toggleNav ? "#ded0b6" : "#FFFFFF"}
-            className="hover:fill-latte"
+            stroke={toggleNav ? "#fbbf24" : "#FFFFFF"}
+            className="transition-colors duration-300"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
@@ -75,31 +77,31 @@ const NavBar = () => {
           />
         </svg>
         {toggleNav && (
-          <div className="fixed top-16 right-5 flex flex-col border-[1px] border-white bg-black bg-opacity-80 rounded-xl text-left z-50">
+          <div className="fixed top-14 right-0 flex flex-col border border-slate-700/50 bg-slate-800/95 backdrop-blur-md rounded-xl text-left z-50 shadow-2xl shadow-slate-900/50 min-w-[200px]">
             <a
               href="#"
-              className={`nav-link p-2 pt-4 border-b-[0.5px] border-white active:text-khaki-500`}
+              className={`nav-link p-3 pt-4 border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors duration-200`}
               onClick={() => setToggleNav(false)}
             >
               Home
             </a>
             <a
               href="#experience"
-              className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+              className={`nav-link p-3 border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors duration-200`}
               onClick={() => setToggleNav(false)}
             >
               Experience
             </a>
             <a
               href="#projects"
-              className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+              className={`nav-link p-3 border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors duration-200`}
               onClick={() => setToggleNav(false)}
             >
               Projects
             </a>
             <a
               href="#contact"
-              className={`nav-link p-2 border-b-[0.5px] border-white active:text-khaki-500`}
+              className={`nav-link p-3 border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors duration-200`}
               onClick={() => setToggleNav(false)}
             >
               Contact
@@ -107,7 +109,7 @@ const NavBar = () => {
             <a
               href="/KeeSongYang_Resume.pdf"
               target="_blank"
-              className={`nav-link p-2 pb-4 active:text-khaki-500`}
+              className={`nav-link p-3 pb-4 hover:bg-slate-700/30 transition-colors duration-200`}
               onClick={() => setToggleNav(false)}
             >
               Resume

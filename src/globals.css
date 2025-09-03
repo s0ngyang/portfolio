@@ -9,14 +9,8 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url(@src/assets/background.webp);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  overscroll-behavior-y: none;
-  overflow-x: auto;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
 }
 
 .nav-link {
@@ -27,13 +21,27 @@ body {
   margin-right: 1em;
   letter-spacing: 0.1em;
   text-decoration: none;
-  transition-property: all;
-  transition-timing-function: linear;
-  transition-duration: 150ms;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition: all 0.3s ease;
+  position: relative;
+
   &:hover {
-    color: #bbab8c;
+    color: #fbbf24;
+    transform: translateY(-2px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }

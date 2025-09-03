@@ -7,11 +7,7 @@ const experiences = [
     yearEnd: "Jun 2023",
     desc: (
       <ul className="list-disc p-2">
-        <li>
-          Collaborated closely with Prof. Tan Tiow Seng to develop examination
-          grading scheme for the CS1010X Programming Methodology course, taught
-          OOP, Dynamic Programming in Python and Java
-        </li>
+        <li>CS1010X Programming Methodology – Python</li>
       </ul>
     ),
   },
@@ -136,19 +132,19 @@ export default function Experience() {
               className="flex relative py-4 sm:items-center w-full mx-auto "
             >
               <div className="hidden md:flex h-full w-6 absolute inset-0 items-center justify-center">
-                <div className="bg-latte h-full w-1 pointer-events-none" />
+                <div className="bg-slate-600/50 h-full w-1 pointer-events-none" />
               </div>
-              <div className="hidden md:inline-flex bg-khaki-300 border-white border-[3px] flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0  items-center justify-center relative z-10" />
+              <div className="hidden md:inline-flex bg-gradient-to-r from-amber-400 to-orange-500 border-2 border-slate-300 flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 items-center justify-center relative z-10 shadow-lg" />
 
-              <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border-[1px] md:border-2 rounded-xl bg-neutral-800 opacity-90 border-white">
-                <p className="text-slate-300 text-[1em] md:text-[1.25em] leading-6 font-semibold">
+              <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border border-slate-600/50 rounded-xl bg-slate-800/60 backdrop-blur-sm shadow-lg hover:bg-slate-800/80 transition-all duration-300 hover:shadow-xl">
+                <p className="text-[#b9cdff] text-[1em] md:text-[1.25em] leading-6 font-semibold">
                   <span className="text-whip">{comp.role}</span>{" "}
                   <span className="text-white">@</span> {comp.name}
                 </p>
                 <p className="text-white text-sm md:text-base font-semibold">
                   {comp.yearStart} - {comp.yearEnd}
                 </p>
-                <p className="text-white text-sm md:text-base font-normal my-1 ml-1 md:ml-2">
+                <p className="text-[#e3e2e0] text-sm md:text-base font-normal my-1 ml-1 md:ml-2">
                   {comp.desc}
                 </p>
               </div>

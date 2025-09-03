@@ -62,17 +62,11 @@ const config: Config = {
           800: "#e4ddd1",
           900: "#f1eee8",
         },
-        blue: {
-          DEFAULT: "#6b8ea1",
-          100: "#151d21",
-          200: "#2a3a42",
-          300: "#3f5663",
-          400: "#547384",
-          500: "#6b8ea1",
-          600: "#8aa5b4",
-          700: "#a7bcc7",
-          800: "#c5d2da",
-          900: "#e2e9ec",
+        // Additional modern colors for the new theme
+        accent: {
+          gold: "#fbbf24",
+          amber: "#f59e0b",
+          orange: "#ea580c",
         },
       },
     },

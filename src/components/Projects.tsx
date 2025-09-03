@@ -45,7 +45,7 @@ const Projects = () => {
         {projectObjs.map((proj) => (
           <div
             key={proj.name}
-            className="max-w-screen-lg border-white border-[1px] md:border-2 bg-transparent relative flex flex-col md:flex-row rounded-2xl transition-shadow duration-200"
+            className="max-w-screen-lg border border-slate-600/50 relative flex flex-col md:flex-row rounded-2xl transition-all duration-300 hover:shadow-xl shadow-lg"
           >
             <div className="w-full md:w-1/3 min-h-64 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
               <img
@@ -58,11 +58,11 @@ const Projects = () => {
               />
             </div>
 
-            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-neutral-800 opacity-90 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
+            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-slate-800/60 backdrop-blur-sm rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
               <p className="text-whip font-semibold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (
-                  <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-blue-700 hover:underline">
+                  <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-[#a0a5ff] hover:underline">
                     <a
                       href={proj.website}
                       target="_blank"
@@ -73,7 +73,7 @@ const Projects = () => {
                   </span>
                 )}
                 {proj.repo && (
-                  <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-blue-700 hover:underline">
+                  <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-[#a0a5ff] hover:underline">
                     <a
                       href={proj.repo}
                       target="_blank"
@@ -84,7 +84,7 @@ const Projects = () => {
                   </span>
                 )}
               </p>
-              <ul className="list-disc text-white mt-2 text-sm md:text-base ml-5">
+              <ul className="list-disc text-[#e3e2e0] mt-2 text-sm md:text-base ml-5">
                 {proj.desc.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
@@ -93,22 +93,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      {/* <div className="flex items-center justify-center mt-10 flex-col">
-        <button className="text-white tracking-[0.35em] font-semibold text-[0.875em] md:text-[1em] border-white border-[1px] py-2 px-8 rounded-lg hover:bg-white hover:text-black transition-all transform ease-linear">
-          SHOW MORE
-        </button>
-        <Text className="text-white tracking-[0.15em] text-[0.75em] md:text-[0.875em] text-center mt-3 font-semibold">
-          ALTERNATIVELY, CHECK OUT MY{" "}
-          <a
-            href="https://github.com"
-            target="_blank"
-            className="text-[#FEBB56] hover:underline"
-          >
-            GITHUB
-          </a>
-          .
-        </Text>
-      </div> */}
     </div>
   );
 };
