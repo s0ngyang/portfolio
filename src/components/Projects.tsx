@@ -62,7 +62,7 @@ const Projects = () => {
               <p className="text-starry font-semibold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (
-                  <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-link hover:underline">
+                  <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-day hover:underline">
                     <a
                       href={proj.website}
                       target="_blank"
@@ -73,7 +73,7 @@ const Projects = () => {
                   </span>
                 )}
                 {proj.repo && (
-                  <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-link hover:underline">
+                  <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-day hover:underline">
                     <a
                       href={proj.repo}
                       target="_blank"

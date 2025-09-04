@@ -147,7 +147,7 @@ export default function Experience() {
                     href={comp.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-link ${
+                    className={`text-day ${
                       comp.website ? "hover:underline" : ""
                     }`}
                   >

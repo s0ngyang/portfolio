@@ -14,10 +14,10 @@ const config: Config = {
       },
       colors: {
         default: "#e3e2e0",
-        link: "#b9cdff",
+        day: "#b9cdff",
         beige: "#fefaee",
         starry: "#dfc796",
-        navy: "#0f172a",
+        night: "#0f172a",
       },
     },
   },
