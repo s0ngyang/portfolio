@@ -52,7 +52,7 @@ export default function ContactSection() {
           <div className="flex flex-col text-center lg:text-left">
             <span className={textStyle}>THINK I’LL BE A GREAT </span>
             <span className={textStyle}>ADDITION TO YOUR TEAM? </span>
-            <h1 className="text-latte-700 my-4 text-[2em] md:text-[3.25em] font-extrabold">
+            <h1 className="text-beige my-4 text-[2em] md:text-[3.25em] font-extrabold">
               Get in Touch.
             </h1>
             <div className="flex flex-col items-center lg:items-start">

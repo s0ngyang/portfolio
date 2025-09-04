@@ -17,6 +17,7 @@ const experiences = [
     role: "Software Engineer Intern",
     yearStart: "May 2024",
     yearEnd: "Aug 2024",
+    website: "https://www.podsmartai.com/",
     desc: (
       <ul className="list-disc p-2">
         <li>
@@ -48,6 +49,7 @@ const experiences = [
     role: "Software Engineer Intern",
     yearStart: "Jan 2025",
     yearEnd: "Jun 2025",
+    website: "https://www.voltade.com/",
     desc: (
       <ul className="list-disc p-2">
         <li>
@@ -86,6 +88,7 @@ const experiences = [
     role: "Software Engineer Intern",
     yearStart: "Jul 2025",
     yearEnd: "Present",
+    website: "https://www.olachat.sg/",
     desc: (
       <ul className="list-disc p-2">
         <li>
@@ -119,7 +122,7 @@ export default function Experience() {
       <p className="text-white text-center text-[0.875em] md:text-[1em] font-semibold leading-tight tracking-[0.35em]">
         EXPERIENCE
       </p>
-      <h1 className="text-latte-700 my-4 text-[2em] md:text-[3.5em] font-extrabold text-center leading-tight">
+      <h1 className="text-beige my-4 text-[2em] md:text-[3.5em] font-extrabold text-center leading-tight">
         I have worked at...
       </h1>
 
@@ -137,14 +140,24 @@ export default function Experience() {
               <div className="hidden md:inline-flex bg-gradient-to-r from-amber-400 to-orange-500 border-2 border-slate-300 flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 items-center justify-center relative z-10 shadow-lg" />
 
               <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border border-slate-600/50 rounded-xl bg-slate-800/60 backdrop-blur-sm shadow-lg hover:bg-slate-800/80 transition-all duration-300 hover:shadow-xl">
-                <p className="text-[#b9cdff] text-[1em] md:text-[1.25em] leading-6 font-semibold">
-                  <span className="text-whip">{comp.role}</span>{" "}
-                  <span className="text-white">@</span> {comp.name}
+                <p className="text-[1em] md:text-[1.25em] leading-6 font-semibold">
+                  <span className="text-starry">{`${comp.role} `}</span>
+                  <span className="text-default">{`@ `}</span>
+                  <a
+                    href={comp.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-link ${
+                      comp.website ? "hover:underline" : ""
+                    }`}
+                  >
+                    {comp.name}
+                  </a>
                 </p>
                 <p className="text-white text-sm md:text-base font-semibold">
                   {comp.yearStart} - {comp.yearEnd}
                 </p>
-                <p className="text-[#e3e2e0] text-sm md:text-base font-normal my-1 ml-1 md:ml-2">
+                <p className="text-default text-sm md:text-base font-normal my-1 ml-1 md:ml-2">
                   {comp.desc}
                 </p>
               </div>

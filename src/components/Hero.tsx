@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
         Hi, my name is
       </p>
 
-      <h1 className="text-latte my-4 text-[2em] md:text-[3.5em] leading-tight font-extrabold overflow-hidden">
+      <h1 className="text-beige my-4 text-[2em] md:text-[3.5em] leading-tight font-extrabold overflow-hidden">
         Song Yang
       </h1>
 

@@ -37,7 +37,7 @@ const Projects = () => {
       className="flex flex-col pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
       id="projects"
     >
-      <h1 className="text-latte-700 my-4 text-[2em] md:text-[3.5em] text-2xl font-extrabold">
+      <h1 className="text-beige my-4 text-[2em] md:text-[3.5em] text-2xl font-extrabold">
         Projects
       </h1>
 
@@ -59,10 +59,10 @@ const Projects = () => {
             </div>
 
             <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-slate-800/60 backdrop-blur-sm rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
-              <p className="text-whip font-semibold text-lg md:text-xl lg:text-2xl">
+              <p className="text-starry font-semibold text-lg md:text-xl lg:text-2xl">
                 {proj.name}
                 {proj.website && (
-                  <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-[#a0a5ff] hover:underline">
+                  <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-link hover:underline">
                     <a
                       href={proj.website}
                       target="_blank"
@@ -73,7 +73,7 @@ const Projects = () => {
                   </span>
                 )}
                 {proj.repo && (
-                  <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-[#a0a5ff] hover:underline">
+                  <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-link hover:underline">
                     <a
                       href={proj.repo}
                       target="_blank"
@@ -84,7 +84,7 @@ const Projects = () => {
                   </span>
                 )}
               </p>
-              <ul className="list-disc text-[#e3e2e0] mt-2 text-sm md:text-base ml-5">
+              <ul className="list-disc text-default mt-2 text-sm md:text-base ml-5">
                 {proj.desc.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
