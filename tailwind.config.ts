@@ -16,7 +16,7 @@ const config: Config = {
         default: "#e3e2e0",
         day: "#b9cdff",
         beige: "#fefaee",
-        starry: "#dfc796",
+        starry: "#EED6A7",
         night: "#0f172a",
       },
     },
