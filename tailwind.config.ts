@@ -16,7 +16,7 @@ const config: Config = {
         default: "#e3e2e0",
         link: "#b9cdff",
         beige: "#fefaee",
-        starry: "#e6d4ae",
+        starry: "#dfc796",
         navy: "#0f172a",
       },
     },
