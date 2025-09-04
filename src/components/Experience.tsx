@@ -137,7 +137,7 @@ export default function Experience() {
               <div className="hidden md:flex h-full w-6 absolute inset-0 items-center justify-center">
                 <div className="bg-slate-600/50 h-full w-1 pointer-events-none" />
               </div>
-              <div className="hidden md:inline-flex bg-gradient-to-r from-amber-400 to-orange-500 border-2 border-slate-300 flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 items-center justify-center relative z-10 shadow-lg" />
+              <div className="hidden md:inline-flex bg-gradient-to-r from-yellow-400 to-amber-500 border-2 border-slate-300 flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 items-center justify-center relative z-10 shadow-lg" />
 
               <div className="flex-grow p-4 flex items-start flex-col md:ml-4 border border-slate-600/50 rounded-xl bg-slate-800/60 backdrop-blur-sm shadow-lg hover:bg-slate-800/80 transition-all duration-300 hover:shadow-xl">
                 <p className="text-[1em] md:text-[1.25em] leading-6 font-semibold">
