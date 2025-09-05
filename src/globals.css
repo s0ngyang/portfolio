@@ -5,12 +5,13 @@
 @tailwind utilities;
 
 html {
+  /* Used for nav bar smooth scrolling */
   scroll-behavior: smooth;
 }
 
 body {
   background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 100%);
-  min-height: 100vh;
+  overscroll-behavior-y: none;
 }
 
 .nav-link {
