@@ -58,9 +58,9 @@ const Projects = () => {
               />
             </div>
 
-            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-slate-800/60 backdrop-blur-sm rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
-              <p className="text-starry font-semibold text-lg md:text-xl lg:text-2xl">
-                {proj.name}
+            <div className="w-full md:w-2/3 p-4 flex flex-col justify-center bg-slate-800/60 hover:bg-slate-800/80 transition-all duration-300 backdrop-blur-sm rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
+              <p className="font-semibold text-lg md:text-xl lg:text-2xl">
+                <span className="text-starry">{proj.name}</span>
                 {proj.website && (
                   <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-day hover:underline">
                     <a

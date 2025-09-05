@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
         />
       </div>
 
-      <p className="text-white tracking-wide text-[0.875em] md:text-[1em] font-semibold">
+      <p className="text-default tracking-wide text-[0.875em] md:text-[1em] font-semibold">
         Hi, my name is
       </p>
 
@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ currentText }) => {
       <div className=" px-8 py-2 mt-4 min-w-[80px] min-h-[40px] flex justify-center items-center">
         <div className="overflow-hidden border-r-[.15em]">
           <p
-            className="text-white tracking-wider max-md:text-[0.875em] font-semibold"
+            className="text-default tracking-wider max-md:text-[0.875em] font-semibold"
             id="typing-container"
           >
             {currentText}

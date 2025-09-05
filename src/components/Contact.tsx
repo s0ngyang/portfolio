@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 
 const textStyle =
-  "text-white text-[0.75em] font-semibold tracking-[0.2em] lg:text-[0.875em]";
+  "text-default text-[0.75em] font-semibold tracking-[0.2em] lg:text-[0.875em]";
 
 type Inputs = {
   name: string;
@@ -91,7 +91,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 {...contactForm("name", { required: true })}
-                className="bg-slate-700/50 w-full p-3 text-white focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
+                className="bg-slate-700/50 w-full p-3 text-default focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
               />
               <p className={textStyle}>EMAIL</p>
               <input
@@ -100,12 +100,12 @@ export default function ContactSection() {
                   required: true,
                   pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                 })}
-                className="bg-slate-700/50 w-full p-3 text-white focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
+                className="bg-slate-700/50 w-full p-3 text-default focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
               />
               <p className={textStyle}>YOUR MESSAGE</p>
               <textarea
                 {...contactForm("message", { required: true })}
-                className="bg-slate-700/50 p-3 w-full text-white min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
+                className="bg-slate-700/50 p-3 w-full text-default min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
               />
             </div>
           </div>

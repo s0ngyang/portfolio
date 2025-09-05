@@ -119,7 +119,7 @@ export default function Experience() {
       className="pt-20 max-w-screen-2xl flex justify-center flex-col"
       id="experience"
     >
-      <p className="text-white text-center text-[0.875em] md:text-[1em] font-semibold leading-tight tracking-[0.35em]">
+      <p className="text-default text-center text-[0.875em] md:text-[1em] font-semibold leading-tight tracking-[0.35em]">
         EXPERIENCE
       </p>
       <h1 className="text-beige my-4 text-[2em] md:text-[3.5em] font-extrabold text-center leading-tight">
@@ -154,7 +154,7 @@ export default function Experience() {
                     {comp.name}
                   </a>
                 </p>
-                <p className="text-white text-sm md:text-base font-semibold">
+                <p className="text-default text-sm md:text-base font-semibold">
                   {comp.yearStart} - {comp.yearEnd}
                 </p>
                 <p className="text-default text-sm md:text-base font-normal my-1 ml-1 md:ml-2">
