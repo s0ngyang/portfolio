@@ -11,7 +11,9 @@ html {
 
 body {
   background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 100%);
+  /* This is for the home indicator on mobile view */
   background-color: #0a0f1a;
+  /* This is for overscrolling on desktop */
   overscroll-behavior-y: none;
 }
 
