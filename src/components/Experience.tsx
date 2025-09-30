@@ -5,11 +5,7 @@ const experiences = [
     role: "Teaching Assistant",
     yearStart: "Jan 2023",
     yearEnd: "Jun 2023",
-    desc: (
-      <ul className="list-disc p-2">
-        <li>CS1010X Programming Methodology – Python</li>
-      </ul>
-    ),
+    desc: ["CS1010X Programming Methodology – Python"],
   },
   {
     id: 1,
@@ -18,30 +14,12 @@ const experiences = [
     yearStart: "May 2024",
     yearEnd: "Aug 2024",
     website: "https://www.podsmartai.com/",
-    desc: (
-      <ul className="list-disc p-2">
-        <li>
-          Built an intuitive audio player in React, enabling UX through progress
-          bar markers for key topics, synchronized playback with transcript
-          timestamps, and direct audio jumps to identified entities
-        </li>
-        <li>
-          Devised a usage tracking schema using FastAPI, Supabase with
-          PostgreSQL to precisely track and enforce user monthly podcast
-          summarisation limits, eliminating a loophole that allowed unlimited
-          access to transcribed episodes
-        </li>
-        <li>
-          Resolved a critical authorization flaw by implementing role-based
-          access control middleware using JWT, preventing free-tier users from
-          accessing premium features
-        </li>
-        <li>
-          Optimised API performance for episode page by adding index to SQL
-          query, which sped up page loading by 60%
-        </li>
-      </ul>
-    ),
+    desc: [
+      "Built an intuitive audio player in React, enabling UX through progress bar markers for key topics, synchronized playback with transcript timestamps, and direct audio jumps to identified entities",
+      "Devised a usage tracking schema using FastAPI, Supabase with PostgreSQL to precisely track and enforce user monthly podcast summarisation limits, eliminating a loophole that allowed unlimited access to transcribed episodes",
+      "Resolved a critical authorization flaw by implementing role-based access control middleware using JWT, preventing free-tier users from accessing premium features",
+      "Optimised API performance for episode page by adding index to SQL query, which sped up page loading by 60%",
+    ],
   },
   {
     id: 2,
@@ -50,37 +28,13 @@ const experiences = [
     yearStart: "Jan 2025",
     yearEnd: "Jun 2025",
     website: "https://www.voltade.com/",
-    desc: (
-      <ul className="list-disc p-2">
-        <li>
-          Spearheaded end-to-end design of AI curriculum planner adopted across
-          28 preschool branches, showcasing attention to detail by iteratively
-          refining features through weekly stakeholder reviews, live demos, and
-          continuous feedback loops
-        </li>
-        <li>
-          Automated data migration across platforms by building an ETL-style
-          pipeline using Graphile Worker cron jobs to extract data from external
-          sources, transform WhatsApp message data and load into PostgreSQL,
-          ensuring idempotency across 20000+ records
-        </li>
-        <li>
-          Resolved a Supabase Auth production bug affecting Outlook users by
-          analysing server logs and identifying email prefetching behaviour that
-          caused magic links to expire
-        </li>
-        <li>
-          Developed a video-to-report tool using React with TanStack, FFmpeg to
-          scale and extract frames, and OpenAI GPT tool calls to identify
-          students, reducing teachers’ time spent per report by 75%
-        </li>
-        <li>
-          Learnt Vue and Ruby on Rails from scratch within 2 weeks to launch a
-          broadcast feature with metrics tracking leveraging WhatsApp Cloud API
-          to send messages to 500+ customers per campaign
-        </li>
-      </ul>
-    ),
+    desc: [
+      "Spearheaded end-to-end design of AI curriculum planner adopted across 28 preschool branches; iteratively refined features via weekly stakeholder reviews, live demos, and continuous feedback loops",
+      "Automated data migration across platforms by building an ETL-style pipeline using Graphile Worker cron jobs to extract from external sources, transform WhatsApp message data, and load into PostgreSQL with idempotency across 20,000+ records",
+      "Resolved a Supabase Auth production bug affecting Outlook users by analyzing server logs and identifying email prefetching behavior that caused magic links to expire",
+      "Developed a video-to-report tool using React with TanStack and FFmpeg to scale/extract frames, plus OpenAI GPT tool calls to identify students, reducing teachers’ time per report by 75%",
+      "Learnt Vue and Ruby on Rails within 2 weeks to launch a broadcast feature with metrics tracking leveraging WhatsApp Cloud API to send messages to 500+ customers per campaign",
+    ],
   },
   {
     id: 3,
@@ -89,27 +43,11 @@ const experiences = [
     yearStart: "Jul 2025",
     yearEnd: "Present",
     website: "https://www.olachat.sg/",
-    desc: (
-      <ul className="list-disc p-2">
-        <li>
-          Engineered React mini-games with WebView, ensuring UI consistency
-          through meticulous design reviews and performance optimizations,
-          including lazy loading and TanStack Query caching, resulting in higher
-          user engagement
-        </li>
-        <li>
-          Migrated CI/CD to a modular two-step flow by creating reusable GitHub
-          workflows for artifact builds and Aliyun Flow for deployments, cutting
-          server load and improving maintainability and separation of concerns
-        </li>
-        <li>
-          Optimized deployment process by analyzing complexity vs. downtime
-          tradeoffs; selected a remove-and-replace method over symlink-based
-          deployment, ensuring maintainability while keeping downtime
-          insignificant ({"<0.2s"})
-        </li>
-      </ul>
-    ),
+    desc: [
+      "Engineered React mini-games with WebView; ensured UI consistency via design reviews and performance optimizations including lazy loading and TanStack Query caching, resulting in higher user engagement",
+      "Migrated CI/CD to a modular two-step flow by creating reusable GitHub workflows for artifact builds and Aliyun Flow for deployments, cutting server load and improving maintainability",
+      "Optimized deployment process by evaluating complexity vs. downtime tradeoffs; selected a remove-and-replace method over symlink-based deployment, keeping downtime insignificant (<0.2s)",
+    ],
   },
 ];
 
@@ -135,7 +73,7 @@ export default function Experience() {
               className="flex relative py-4 sm:items-center w-full mx-auto "
             >
               <div className="hidden md:flex h-full w-6 absolute inset-0 items-center justify-center">
-                <div className="bg-slate-600/50 h-full w-1 pointer-events-none" />
+                <div className="bg-slate-700 h-full w-1 pointer-events-none" />
               </div>
               <div className="hidden md:inline-flex bg-gradient-to-r from-yellow-400 to-amber-500 border-2 border-slate-300 flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 items-center justify-center relative z-10 shadow-lg" />
 
@@ -157,9 +95,11 @@ export default function Experience() {
                 <p className="text-default text-sm md:text-base font-semibold">
                   {comp.yearStart} - {comp.yearEnd}
                 </p>
-                <p className="text-default text-sm md:text-base font-normal my-1 ml-1 md:ml-2">
-                  {comp.desc}
-                </p>
+                <ul className="text-default text-sm md:text-base font-normal my-1 ml-1 md:ml-2 list-disc p-2">
+                  {comp.desc.map((text, idx) => (
+                    <li key={idx}>{text}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

@@ -10,9 +10,26 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #0a0f1a 0%, #0f172a 100%);
+  background: radial-gradient(
+      800px circle at 15% 10%,
+      rgba(251, 191, 36, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      700px circle at 85% 20%,
+      rgba(99, 102, 241, 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px circle at 50% 120%,
+      rgba(16, 185, 129, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(135deg, #070b14 0%, #0b1225 50%, #0f172a 100%);
   /* This is for the home indicator on mobile view */
   background-color: #0a0f1a;
+  /* Keep the layers fixed for a subtle parallax effect */
+  background-attachment: fixed;
   /* This is for overscrolling on desktop */
   overscroll-behavior-y: none;
 }
@@ -25,7 +42,7 @@ body {
   margin-right: 1em;
   letter-spacing: 0.1em;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   position: relative;
 
   &:hover {
@@ -41,7 +58,7 @@ body {
     bottom: -4px;
     left: 50%;
     background: linear-gradient(90deg, #fbbf24, #f59e0b);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     transform: translateX(-50%);
   }
 
