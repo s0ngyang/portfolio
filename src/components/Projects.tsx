@@ -85,8 +85,8 @@ const Projects = () => {
                 )}
               </p>
               <ul className="list-disc text-default mt-2 text-sm md:text-base ml-5">
-                {proj.desc.map((point, index) => (
-                  <li key={index}>{point}</li>
+                {proj.desc.map((text, idx) => (
+                  <li key={idx}>{text}</li>
                 ))}
               </ul>
             </div>

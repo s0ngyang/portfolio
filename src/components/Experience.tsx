@@ -1,18 +1,23 @@
+const formatMonthYear = (date: Date) =>
+  new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" }).format(
+    date
+  );
+
 const experiences = [
   {
     id: 0,
     name: "National University of Singapore",
     role: "Teaching Assistant",
-    yearStart: "Jan 2023",
-    yearEnd: "Jun 2023",
+    yearStart: new Date(2023, 0, 1),
+    yearEnd: new Date(2023, 5, 30),
     desc: ["CS1010X Programming Methodology – Python"],
   },
   {
     id: 1,
     name: "Podsmart AI",
     role: "Software Engineer Intern",
-    yearStart: "May 2024",
-    yearEnd: "Aug 2024",
+    yearStart: new Date(2024, 4, 1),
+    yearEnd: new Date(2024, 7, 31),
     website: "https://www.podsmartai.com/",
     desc: [
       "Built an intuitive audio player in React, enabling UX through progress bar markers for key topics, synchronized playback with transcript timestamps, and direct audio jumps to identified entities",
@@ -25,8 +30,8 @@ const experiences = [
     id: 2,
     name: "Voltade",
     role: "Software Engineer Intern",
-    yearStart: "Jan 2025",
-    yearEnd: "Jun 2025",
+    yearStart: new Date(2025, 0, 1),
+    yearEnd: new Date(2025, 5, 30),
     website: "https://www.voltade.com/",
     desc: [
       "Spearheaded end-to-end design of AI curriculum planner adopted across 28 preschool branches; iteratively refined features via weekly stakeholder reviews, live demos, and continuous feedback loops",
@@ -40,8 +45,8 @@ const experiences = [
     id: 3,
     name: "Ola Chat",
     role: "Software Engineer Intern",
-    yearStart: "Jul 2025",
-    yearEnd: "Present",
+    yearStart: new Date(2025, 6, 1),
+    yearEnd: null,
     website: "https://www.olachat.sg/",
     desc: [
       "Engineered React mini-games with WebView; ensured UI consistency via design reviews and performance optimizations including lazy loading and TanStack Query caching, resulting in higher user engagement",
@@ -66,7 +71,7 @@ export default function Experience() {
 
       <div className="md:flex flex-wrap max-w-screen-lg">
         {experiences
-          .sort((a, b) => b.id - a.id)
+          .sort((a, b) => b.yearStart.getTime() - a.yearStart.getTime())
           .map((comp) => (
             <div
               key={comp.id}
@@ -81,22 +86,26 @@ export default function Experience() {
                 <p className="text-[1em] md:text-[1.25em] leading-6 font-semibold">
                   <span className="text-starry">{`${comp.role} `}</span>
                   <span className="text-default">{`@ `}</span>
-                  <a
-                    href={comp.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-day ${
-                      comp.website ? "hover:underline" : ""
-                    }`}
-                  >
-                    {comp.name}
-                  </a>
+                  {comp.website ? (
+                    <a
+                      href={comp.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-day hover:underline"
+                    >
+                      {comp.name}
+                    </a>
+                  ) : (
+                    <span className="text-day">{comp.name}</span>
+                  )}
                 </p>
                 <p className="text-default text-sm md:text-base font-semibold">
-                  {comp.yearStart} - {comp.yearEnd}
+                  {formatMonthYear(comp.yearStart)} -{" "}
+                  {comp.yearEnd ? formatMonthYear(comp.yearEnd) : "Present"}
                 </p>
                 <ul className="text-default text-sm md:text-base font-normal my-1 ml-1 md:ml-2 list-disc p-2">
                   {comp.desc.map((text, idx) => (
+                    // idx can be used as the key because this array is static
                     <li key={idx}>{text}</li>
                   ))}
                 </ul>
