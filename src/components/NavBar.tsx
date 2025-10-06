@@ -52,6 +52,7 @@ const NavBar = () => {
 
       {/* Mobile Navbar */}
       <button
+        aria-label="Toggle navigation menu"
         className={`block md:hidden fixed top-5 right-5 p-3 rounded-xl z-50 transition-all duration-300 ${
           toggleNav
             ? "bg-slate-800/90 backdrop-blur-md border border-slate-700/50 shadow-lg"

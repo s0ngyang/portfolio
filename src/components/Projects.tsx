@@ -10,8 +10,8 @@ const projectObjs = [
     ],
     thumb: {
       src: typedashImage,
-      width: 1530,
-      height: 1500,
+      width: 3024,
+      height: 1709,
     },
     website: "https://typedash.songyang.dev",
     repo: "https://github.com/clickclackers/typedash-v2",
@@ -49,7 +49,7 @@ const Projects = () => {
           >
             <div className="w-full md:w-1/3 min-h-64 relative rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
               <img
-                className="object-cover h-full"
+                className="object-cover w-full h-full"
                 src={proj.thumb.src}
                 width={proj.thumb.width}
                 height={proj.thumb.height}

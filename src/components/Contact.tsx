@@ -89,12 +89,14 @@ export default function ContactSection() {
             <div className="w-full flex flex-col gap-y-2">
               <p className={textStyle}>NAME</p>
               <input
+                aria-label="Name"
                 type="text"
                 {...contactForm("name", { required: true })}
                 className="bg-slate-700/50 w-full p-3 text-default focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
               />
               <p className={textStyle}>EMAIL</p>
               <input
+                aria-label="Email"
                 type="email"
                 {...contactForm("email", {
                   required: true,
@@ -104,6 +106,7 @@ export default function ContactSection() {
               />
               <p className={textStyle}>YOUR MESSAGE</p>
               <textarea
+                aria-label="Your Message"
                 {...contactForm("message", { required: true })}
                 className="bg-slate-700/50 p-3 w-full text-default min-h-[200px] lg:min-h-[320px] focus:ring-2 focus:ring-amber-400 focus:outline-none border border-slate-600/50 rounded-lg transition-all duration-200 hover:border-slate-500/70"
               />
@@ -111,6 +114,7 @@ export default function ContactSection() {
           </div>
           <div className="mt-4 flex justify-center">
             <button
+              aria-label="Submit contact form"
               type="submit"
               disabled={isSubmitDisabled}
               className={`${textStyle} border border-slate-600/50 px-6 py-3 rounded-lg transition-all duration-300 ${

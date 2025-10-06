@@ -41,10 +41,11 @@ const Hero = () => {
       <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] overflow-hidden rounded-full mb-6 pointer-events-none select-none">
         <img
           src="/profile.webp"
-          width={300}
-          height={300}
+          width={600}
+          height={600}
           alt="Profile Photo"
           loading="eager"
+          fetchPriority="high"
         />
       </div>
 
