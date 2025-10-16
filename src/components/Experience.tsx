@@ -52,6 +52,7 @@ const experiences = [
       "Engineered React mini-games with WebView; ensured UI consistency via design reviews and performance optimizations including lazy loading and TanStack Query caching, resulting in higher user engagement",
       "Migrated CI/CD to a modular two-step flow by creating reusable GitHub workflows for artifact builds and Aliyun Flow for deployments, cutting server load and improving maintainability",
       "Optimized deployment process by evaluating complexity vs. downtime tradeoffs; selected a remove-and-replace method over symlink-based deployment, keeping downtime insignificant (<0.2s)",
+      "Configured centralized Sentry error monitoring in a self-hosted npm project template, enabling all future projects to report session replays and Core Web Vitals tracing, with automated Slack alerts for critical errors",
     ],
   },
 ];
