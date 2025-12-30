@@ -1,7 +1,5 @@
 const formatMonthYear = (date: Date) =>
-  new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" }).format(
-    date
-  );
+  new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" }).format(date);
 
 const experiences = [
   {
@@ -15,54 +13,35 @@ const experiences = [
   {
     id: 1,
     name: "Podsmart AI",
-    role: "Software Engineer Intern",
+    role: "Frontend Software Engineer Intern",
     yearStart: new Date(2024, 4, 1),
     yearEnd: new Date(2024, 7, 31),
     website: "https://www.podsmartai.com/",
-    desc: [
-      "Built an intuitive audio player in React, enabling UX through progress bar markers for key topics, synchronized playback with transcript timestamps, and direct audio jumps to identified entities",
-      "Devised a usage tracking schema using FastAPI, Supabase with PostgreSQL to precisely track and enforce user monthly podcast summarisation limits, eliminating a loophole that allowed unlimited access to transcribed episodes",
-      "Resolved a critical authorization flaw by implementing role-based access control middleware using JWT, preventing free-tier users from accessing premium features",
-      "Optimised API performance for episode page by adding index to SQL query, which sped up page loading by 60%",
-    ],
+    desc: ["AI Podcast Summarisation with React and Supabase"],
   },
   {
     id: 2,
     name: "Voltade",
-    role: "Software Engineer Intern",
+    role: "Full-Stack Software Engineer Intern",
     yearStart: new Date(2025, 0, 1),
     yearEnd: new Date(2025, 5, 30),
     website: "https://www.voltade.com/",
-    desc: [
-      "Spearheaded end-to-end design of AI curriculum planner adopted across 28 preschool branches; iteratively refined features via weekly stakeholder reviews, live demos, and continuous feedback loops",
-      "Automated data migration across platforms by building an ETL-style pipeline using Graphile Worker cron jobs to extract from external sources, transform WhatsApp message data, and load into PostgreSQL with idempotency across 20,000+ records",
-      "Resolved a Supabase Auth production bug affecting Outlook users by analyzing server logs and identifying email prefetching behavior that caused magic links to expire",
-      "Developed a video-to-report tool using React with TanStack and FFmpeg to scale/extract frames, plus OpenAI GPT tool calls to identify students, reducing teachers’ time per report by 75%",
-      "Learnt Vue and Ruby on Rails within 2 weeks to launch a broadcast feature with metrics tracking leveraging WhatsApp Cloud API to send messages to 500+ customers per campaign",
-    ],
+    desc: ["Enterprise Resource Planning with React and Hono.js"],
   },
   {
     id: 3,
     name: "Ola Chat",
-    role: "Software Engineer Intern",
+    role: "Full-Stack Software Engineer Intern",
     yearStart: new Date(2025, 6, 1),
-    yearEnd: null,
+    yearEnd: new Date(2025, 11, 31),
     website: "https://www.olachat.sg/",
-    desc: [
-      "Engineered React mini-games with WebView; ensured UI consistency via design reviews and performance optimizations including lazy loading and TanStack Query caching, resulting in higher user engagement",
-      "Migrated CI/CD to a modular two-step flow by creating reusable GitHub workflows for artifact builds and Aliyun Flow for deployments, cutting server load and improving maintainability",
-      "Optimized deployment process by evaluating complexity vs. downtime tradeoffs; selected a remove-and-replace method over symlink-based deployment, keeping downtime insignificant (<0.2s)",
-      "Configured centralized Sentry error monitoring in a self-hosted npm project template, enabling all future projects to report session replays and Core Web Vitals tracing, with automated Slack alerts for critical errors",
-    ],
+    desc: ["WebView events with React and Golang gRPC"],
   },
 ];
 
 export default function Experience() {
   return (
-    <div
-      className="pt-20 max-w-screen-2xl flex justify-center flex-col"
-      id="experience"
-    >
+    <div className="pt-20 max-w-screen-2xl flex justify-center flex-col" id="experience">
       <p className="text-default text-center text-[0.875em] md:text-[1em] font-semibold leading-tight tracking-[0.35em]">
         EXPERIENCE
       </p>
@@ -74,10 +53,7 @@ export default function Experience() {
         {experiences
           .sort((a, b) => b.yearStart.getTime() - a.yearStart.getTime())
           .map((comp) => (
-            <div
-              key={comp.id}
-              className="flex relative py-4 sm:items-center w-full mx-auto "
-            >
+            <div key={comp.id} className="flex relative py-4 sm:items-center w-full mx-auto ">
               <div className="hidden md:flex h-full w-6 absolute inset-0 items-center justify-center">
                 <div className="bg-slate-700 h-full w-1 pointer-events-none" />
               </div>
