@@ -5,8 +5,8 @@ const projectObjs = [
   {
     name: "TypeDash V2",
     desc: [
-      "Developed a real-time type-racing game using React and WebSockets (migrated from Socket.IO), leveraging Redis for centralised game state management and Redis Pub/Sub to broadcast typing progress to users within multiplayer rooms",
-      "Migrating backend from Express.js to Golang for better concurrency support; implementing a Redis-powered leaderboard system for real-time ranking updates",
+      "A real-time type-racing game using React with TanStack, Golang with Gin & WebSockets, leveraging Redis for real time updates and leaderboard rankings",
+      "Containerized application with Docker and deployed using Docker Compose orchestration, integrating Caddy reverse proxy for automatic HTTPS, PostgreSQL with health checks, and Docker secrets for credential management",
     ],
     thumb: {
       src: typedashImage,
@@ -19,7 +19,7 @@ const projectObjs = [
   {
     name: "Exportifellas",
     desc: [
-      "Ideated a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall to streamline song voting process for all performances",
+      "Ideated a plaintext playlist extraction feature using the Spotify API in an open-source fork, deployed for internal use in NUS Raffles Hall to streamline song voting process",
     ],
     thumb: {
       src: exportifellasImage,
@@ -63,22 +63,14 @@ const Projects = () => {
                 <span className="text-starry">{proj.name}</span>
                 {proj.website && (
                   <span className="ml-4 text-sm font-semibold md:text-base lg:text-lg text-day hover:underline">
-                    <a
-                      href={proj.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href={proj.website} target="_blank" rel="noopener noreferrer">
                       Website
                     </a>
                   </span>
                 )}
                 {proj.repo && (
                   <span className="ml-2 text-sm font-semibold md:text-base lg:text-lg text-day hover:underline">
-                    <a
-                      href={proj.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href={proj.repo} target="_blank" rel="noopener noreferrer">
                       Repo
                     </a>
                   </span>
