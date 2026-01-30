@@ -40,7 +40,7 @@ const experiences = [
   {
     id: 4,
     name: "Alta Exchange",
-    role: "Frontend Software Engineer Intern",
+    role: "Full-Stack Software Engineer Intern",
     yearStart: new Date(2026, 0, 12),
     yearEnd: null,
     website: "https://alta.exchange/",
