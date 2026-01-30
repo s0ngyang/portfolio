@@ -13,11 +13,11 @@ const experiences = [
   {
     id: 1,
     name: "Podsmart AI",
-    role: "Frontend Software Engineer Intern",
+    role: "Full-Stack Software Engineer Intern",
     yearStart: new Date(2024, 4, 1),
     yearEnd: new Date(2024, 7, 31),
     website: "https://www.podsmartai.com/",
-    desc: ["AI Podcast Summarisation with React and Supabase"],
+    desc: ["AI Podcast Summarisation with React, FastAPI & Supabase"],
   },
   {
     id: 2,
@@ -26,16 +26,25 @@ const experiences = [
     yearStart: new Date(2025, 0, 1),
     yearEnd: new Date(2025, 5, 30),
     website: "https://www.voltade.com/",
-    desc: ["Enterprise Resource Planning with React and Hono.js"],
+    desc: ["Enterprise Resource Planning with Reac, Hono.js and Supabase"],
   },
   {
     id: 3,
     name: "Ola Chat",
-    role: "Full-Stack Software Engineer Intern",
+    role: "Frontend Software Engineer Intern",
     yearStart: new Date(2025, 6, 1),
     yearEnd: new Date(2025, 11, 31),
     website: "https://www.olachat.sg/",
-    desc: ["WebView events with React and Golang gRPC"],
+    desc: ["Event pages with WebView, React and Golang gRPC"],
+  },
+  {
+    id: 4,
+    name: "Alta Exchange",
+    role: "Frontend Software Engineer Intern",
+    yearStart: new Date(2026, 0, 12),
+    yearEnd: null,
+    website: "https://alta.exchange/",
+    desc: ["Private Capital Markets Operations Dashboard"],
   },
 ];
 
@@ -77,8 +86,7 @@ export default function Experience() {
                   )}
                 </p>
                 <p className="text-default text-sm md:text-base font-semibold">
-                  {formatMonthYear(comp.yearStart)} -{" "}
-                  {comp.yearEnd ? formatMonthYear(comp.yearEnd) : "Present"}
+                  {formatMonthYear(comp.yearStart)} - {comp.yearEnd ? formatMonthYear(comp.yearEnd) : "Present"}
                 </p>
                 <ul className="text-default text-sm md:text-base font-normal my-1 ml-1 md:ml-2 list-disc p-2">
                   {comp.desc.map((text, idx) => (
