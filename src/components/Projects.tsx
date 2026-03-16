@@ -5,8 +5,7 @@ const projectObjs = [
   {
     name: "TypeDash V2",
     desc: [
-      "A real-time type-racing game using React with TanStack, Golang with Gin & WebSockets, leveraging Redis for real time updates and leaderboard rankings",
-      "Containerized application with Docker and deployed using Docker Compose orchestration, integrating Caddy reverse proxy for automatic HTTPS, PostgreSQL with health checks, and Docker secrets for credential management",
+      "A real-time type-racing game using React/TanStack and Golang/WebSocket, deployed using Docker Compose on OVH Cloud VPS",
     ],
     thumb: {
       src: typedashImage,
@@ -37,9 +36,7 @@ const Projects = () => {
       className="flex flex-col pt-12 py-12 md:min-h-screen justify-center items-center max-w-screen-2xl"
       id="projects"
     >
-      <h1 className="text-beige my-4 text-[2em] md:text-[3.5em] text-2xl font-extrabold">
-        Projects
-      </h1>
+      <h1 className="text-beige my-4 text-[2em] md:text-[3.5em] text-2xl font-extrabold">Projects</h1>
 
       <div className="grid grid-cols-1 mt-10 gap-10 w-full">
         {projectObjs.map((proj) => (
