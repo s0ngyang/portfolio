@@ -42,9 +42,18 @@ const experiences = [
     name: "Alta Exchange",
     role: "Full-Stack Software Engineer Intern",
     yearStart: new Date(2026, 0, 12),
-    yearEnd: null,
+    yearEnd: new Date(2026, 4, 18),
     website: "https://alta.exchange/",
     desc: ["Private Capital Markets Operations Dashboard"],
+  },
+  {
+    id: 5,
+    name: "Binance",
+    role: "Full-Stack Software Engineer Intern",
+    yearStart: new Date(2026, 4, 19),
+    yearEnd: null,
+    website: "https://p2p.binance.com/",
+    desc: ["P2P"],
   },
 ];
 
